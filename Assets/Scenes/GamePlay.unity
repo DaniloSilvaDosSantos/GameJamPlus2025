@@ -628,7 +628,7 @@ PrefabInstance:
     - target: {fileID: 1133104061112221951, guid: 455d35e355315744d94b5c07015ede80, type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 8400000, guid: 36ec7a106fb5ab14fb2c412a2a077468, type: 2}
+      objectReference: {fileID: 8400000, guid: 30277b9aa57671e49af4434db7469e12, type: 2}
     - target: {fileID: 1133104061112221951, guid: 455d35e355315744d94b5c07015ede80, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 223
@@ -3456,7 +3456,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: 36ec7a106fb5ab14fb2c412a2a077468, type: 2}
+  m_Texture: {fileID: 8400000, guid: 30277b9aa57671e49af4434db7469e12, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -4439,7 +4439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1434294744
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4457,7 +4457,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1440, y: 1080}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1434294745
 MonoBehaviour:
@@ -4471,7 +4471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 109b81187834b2d40945342ca8510c9d, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -5962,7 +5962,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 32
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: 36ec7a106fb5ab14fb2c412a2a077468, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: 46bdb97ec0b03cb46a2bc2a9c2c5bb28, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1

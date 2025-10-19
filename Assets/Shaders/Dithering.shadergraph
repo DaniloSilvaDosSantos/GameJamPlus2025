@@ -4313,7 +4313,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":8400000,\"guid\":\"36ec7a106fb5ab14fb2c412a2a077468\",\"type\":2}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":8400000,\"guid\":\"46bdb97ec0b03cb46a2bc2a9c2c5bb28\",\"type\":2}}",
         "m_Guid": ""
     },
     "isMainTexture": false,
