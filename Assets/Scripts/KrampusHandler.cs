@@ -14,6 +14,7 @@ public class KrampusHandler : MonoBehaviour
     [SerializeField] private AudioClip Slowstep;
     [SerializeField] private AudioClip Faststep;
     [SerializeField] private AudioClip Scream1;
+    [SerializeField] private AudioClip Scream2;
 
     [Header("Controle de comportamento")]
     public bool temporary = true;
@@ -58,6 +59,11 @@ public class KrampusHandler : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    void SpookySound()
+    {
+        ASS.PlayOneShot(Scream2);
+    }
+
     void HandlePlayerChase()
     {
         if (Player == null)
@@ -78,6 +84,11 @@ public class KrampusHandler : MonoBehaviour
         Quaternion rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
         transform.rotation = rotation;
 
+
+        if (playerDirection.magnitude > 1.5f)
+            {
+                GameManager.GM.RestartLevel();
+            }
 
         if (currentlyStartled)
         {
@@ -113,6 +124,11 @@ public class KrampusHandler : MonoBehaviour
                 {
                     AnimatorMove.SetBool("Running", false);
                     AnimatorMove.SetBool("Stalking", false);
+                    if (!screamed)
+                    {
+                        Invoke("SpookySound", 3f);
+                        screamed = true;
+                    }
 
                     RB.linearVelocity = transform.forward*0 + new Vector3(0f, -0.1f, 0f);
                     if (playerDirection.magnitude < 3f) follower = false;

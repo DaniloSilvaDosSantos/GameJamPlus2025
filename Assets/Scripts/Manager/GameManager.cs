@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public string currentScene = "";
     public string sceneToChange = "";
 
+    public Vector3 RespawnPos = new Vector3 (0f,0f,0f);
+
     public bool Fade = false;
 
     public float Vol = 1f;
@@ -88,6 +90,19 @@ public class GameManager : MonoBehaviour
         sceneToChange = newScene;
 
         Invoke("DoTheSceneChange", 2f);
+    }
+
+    public void RestartLevel()
+    {
+        if (currentScene != "") SceneManager.UnloadSceneAsync(currentScene);
+        currentScene = sceneToChange;
+        SceneManager.LoadScene(sceneToChange, LoadSceneMode.Additive);
+        GameObject Player= GameObject.FindWithTag("Player");
+
+        if (RespawnPos != new Vector3(0f,0f,0f))
+        {
+            Player.transform.position = RespawnPos;
+        }
     }
 
     public void DoTheSceneChange()

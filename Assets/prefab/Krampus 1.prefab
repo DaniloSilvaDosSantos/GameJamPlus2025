@@ -619,13 +619,18 @@ MonoBehaviour:
   Slowstep: {fileID: 8300000, guid: 95f01f91a2ae3ba4b8a073d47cabe333, type: 3}
   Faststep: {fileID: 8300000, guid: cf44b2024d985b440af2d648bb80ea88, type: 3}
   Scream1: {fileID: 8300000, guid: 2b0cb7b92186ca1459b2c9e5c246c9bb, type: 3}
+  Scream2: {fileID: 8300000, guid: 6d48b5e316802704fa38e1a56635e14f, type: 3}
+  temporary: 1
   attacking: 1
+  follower: 0
   startle: 1
   currentlyStartled: 0
+  screamed: 0
   stalkSpeed: 2.5
   leapSpeed: 6
   leapDist: 4
   startleRange: 8
+  lifeTime: 25
 --- !u!54 &3060396091108197119
 Rigidbody:
   m_ObjectHideFlags: 0
