@@ -107,25 +107,30 @@ public class KrampusHandler : MonoBehaviour
                 if (!AS.isPlaying) AS.PlayOneShot(Slowstep, 0.5f);
                 RB.linearVelocity = transform.forward*stalkSpeed + new Vector3(0f, -1f, 0f);
             }
-            else if (follower)
-            {
-                AnimatorMove.SetBool("Running", false);
-                AnimatorMove.SetBool("Stalking", false);
-
-                RB.linearVelocity = transform.forward*0 + new Vector3(0f, -0.1f, 0f);
-            }
             else
             {
-                AnimatorMove.SetBool("Running", true);
-                AnimatorMove.SetBool("Stalking", false);
-                if (!screamed)
+                if (follower)
                 {
-                    ASS.PlayOneShot(Scream1);
-                    screamed = true;
+                    AnimatorMove.SetBool("Running", false);
+                    AnimatorMove.SetBool("Stalking", false);
+
+                    RB.linearVelocity = transform.forward*0 + new Vector3(0f, -0.1f, 0f);
+                    if (playerDirection.magnitude < 3f) follower = false;
                 }
-                if (!AS.isPlaying) AS.PlayOneShot(Faststep);
-                RB.linearVelocity = transform.forward*leapSpeed + new Vector3(0f, -3f, 0f);
+                else
+                {
+                    AnimatorMove.SetBool("Running", true);
+                    AnimatorMove.SetBool("Stalking", false);
+                    if (!screamed)
+                    {
+                        ASS.PlayOneShot(Scream1);
+                        screamed = true;
+                    }
+                    if (!AS.isPlaying) AS.PlayOneShot(Faststep);
+                    RB.linearVelocity = transform.forward*leapSpeed + new Vector3(0f, -3f, 0f);
+                }
             }
+
         }
 
     }
