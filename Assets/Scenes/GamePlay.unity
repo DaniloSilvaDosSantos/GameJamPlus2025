@@ -5061,8 +5061,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7364920884504405308, guid: ce40d26fb4406b84a8aa6335b86bc3d5, type: 3}
+      propertyPath: follower
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7364920884504405308, guid: ce40d26fb4406b84a8aa6335b86bc3d5, type: 3}
       propertyPath: leapDist
-      value: 4
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7364920884504405308, guid: ce40d26fb4406b84a8aa6335b86bc3d5, type: 3}
+      propertyPath: screamed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7364920884504405308, guid: ce40d26fb4406b84a8aa6335b86bc3d5, type: 3}
+      propertyPath: leapSpeed
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7364920884504405308, guid: ce40d26fb4406b84a8aa6335b86bc3d5, type: 3}
+      propertyPath: startleRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5301,6 +5317,10 @@ PrefabInstance:
     - target: {fileID: 3060396091108197119, guid: ce40d26fb4406b84a8aa6335b86bc3d5, type: 3}
       propertyPath: m_Constraints
       value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 7364920884504405308, guid: ce40d26fb4406b84a8aa6335b86bc3d5, type: 3}
+      propertyPath: startle
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7364920884504405308, guid: ce40d26fb4406b84a8aa6335b86bc3d5, type: 3}
       propertyPath: attacking
