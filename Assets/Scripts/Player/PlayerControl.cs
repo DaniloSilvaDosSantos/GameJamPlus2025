@@ -9,6 +9,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private Transform Camera;
     [SerializeField] private Rigidbody RB;
     [SerializeField] private LayerMask Mobs;
+    [SerializeField] private LayerMask Default;
     public InputActionAsset InputActions;
 
     //"Declaração de Inputs"
@@ -123,17 +124,15 @@ public class PlayerControl : MonoBehaviour
 
     void CheckGrounded()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position - transform.up*.5f, 0.35f);
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position - transform.up*.3f, 0.3f, Default);
         foreach (var collider in hitColliders)
         {
             if (collider != transform.GetComponent<Collider>())
             {
-                Debug.Log("ground");
+                RB.linearVelocity += transform.up * -1f * Time.deltaTime;
                 return;
             }
         }
-
-        Debug.Log("no ground");
 
         MoveAngle = new Vector2 (0f,0f);
         RB.linearVelocity += transform.up * -10f * Time.deltaTime;
