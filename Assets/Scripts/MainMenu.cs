@@ -50,13 +50,13 @@ public class MainMenu : MonoBehaviour
     {
         int previousButtonIndex = currentButtonIndex;
 
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             currentButtonIndex--;
             if (currentButtonIndex < 0) currentButtonIndex = menuButtons.Length - 1;
             Debug.Log(currentButtonIndex);
         }
-        else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             currentButtonIndex++;
             if (currentButtonIndex >= menuButtons.Length) currentButtonIndex = 0;
