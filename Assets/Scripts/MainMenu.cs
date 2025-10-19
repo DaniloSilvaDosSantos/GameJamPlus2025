@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
     public GameObject optionsMenu;
     public string menuCanvasName = "CanvasMenu";
     public UnityEngine.UI.Button[] menuButtons;
+    public Image[] menuButtonsHiglight;
     public int currentButtonIndex = 0;
 
     [Space]
@@ -77,10 +78,12 @@ public class MainMenu : MonoBehaviour
             if (i == currentButtonIndex)
             {
                 buttonImage.color = highlightColor;
+                menuButtonsHiglight[i].gameObject.SetActive(true);
             }
             else
             {
                 buttonImage.color = defaultColor;
+                menuButtonsHiglight[i].gameObject.SetActive(false);
             }
         }
     }

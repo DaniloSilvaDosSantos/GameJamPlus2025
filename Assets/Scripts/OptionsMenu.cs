@@ -6,6 +6,7 @@ public class OptionsMenu : MonoBehaviour
     public string menuCanvasName = "CanvasMenu";
     public GameObject mainMenu;
     public Button[] optionsButtons;
+    public Image[] optionsButtonHighlights;
     public int currentButtonIndex = 0;
     public Slider volumeSlider;
 
@@ -74,10 +75,12 @@ public class OptionsMenu : MonoBehaviour
             if (i == currentButtonIndex)
             {
                 buttonImage.color = highlightColor;
+                optionsButtonHighlights[i].gameObject.SetActive(true);
             }
             else
             {
                 buttonImage.color = defaultColor;
+                optionsButtonHighlights[i].gameObject.SetActive(false);
             }
         }
     }
