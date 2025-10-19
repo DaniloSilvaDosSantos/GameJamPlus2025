@@ -236,7 +236,7 @@ public class PlayerControl : MonoBehaviour
                     RD.running = true;
                 }
             }
-            if (collider.gameObject.CompareTag("Enemy"))
+            if (collider.gameObject.CompareTag("Enemy") && (collider.gameObject.transform.position - transform.position).magnitude < 6f)
             {
                 GameManager.GM.ChangeScene("GamePlay");
                 GameManager.GM.NightTime();
