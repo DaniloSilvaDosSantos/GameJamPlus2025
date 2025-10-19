@@ -6,6 +6,7 @@ public class KrampusHandler : MonoBehaviour
     [SerializeField] private Rigidbody RB;
     [SerializeField] private GameObject Player;
     [SerializeField] private LayerMask PlayerMask;
+    [SerializeField] private Animator AnimatorMove;
 
     [Header("Controle de comportamento")]
     public bool attacking = false;
@@ -17,7 +18,12 @@ public class KrampusHandler : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!attacking) return;
+        if (!attacking)
+        {
+            AnimatorMove.SetBool("Stalking", false);
+            AnimatorMove.SetBool("Running", false);
+            return;
+        }
 
         HandlePlayerChase();
     }
@@ -44,10 +50,14 @@ public class KrampusHandler : MonoBehaviour
 
         if (playerDirection.magnitude > leapDist)
         {
+            AnimatorMove.SetBool("Running", false);
+            AnimatorMove.SetBool("Stalking", true);
             RB.linearVelocity = transform.forward*stalkSpeed;
         }
         else
         {
+            AnimatorMove.SetBool("Running", true);
+            AnimatorMove.SetBool("Stalking", false);
             RB.linearVelocity = transform.forward*leapSpeed;
         }
     }
