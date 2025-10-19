@@ -6051,10 +6051,6 @@ PrefabInstance:
       propertyPath: leapSpeed
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 7364920884504405308, guid: ce40d26fb4406b84a8aa6335b86bc3d5, type: 3}
-      propertyPath: startleRange
-      value: 4.7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

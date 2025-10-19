@@ -634,7 +634,7 @@ MonoBehaviour:
   stalkSpeed: 4
   leapSpeed: 6
   leapDist: 6
-  startleRange: 8
+  startleRange: 7
   lifeTime: 25
 --- !u!54 &3060396091108197119
 Rigidbody:
