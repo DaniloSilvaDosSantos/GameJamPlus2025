@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     {
         GM = this;
         FadeScreen.gameObject.SetActive(true);
-        ChangeScene("IntroLevel");
+        ChangeScene("MainMenu");
     }
 
     void Update()
