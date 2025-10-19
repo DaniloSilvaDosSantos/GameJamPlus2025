@@ -224,11 +224,16 @@ MonoBehaviour:
   Mobs:
     serializedVersion: 2
     m_Bits: 8
+  Default:
+    serializedVersion: 2
+    m_Bits: 0
   InputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   lookSensX: 50
   lookSensY: 50
   fovMin: 40
   fovMax: 70
+  shakeReduct: 100
+  shakeMax: 100
   movementSpeed: 2.25
   movementDamping: 0.2
   Flash: {fileID: 7591554438179118289}
@@ -236,11 +241,11 @@ MonoBehaviour:
   PhysCam: {fileID: 5960439249234001092}
   GraphCam: {fileID: 1133104061112221951}
   aimState: 0
-  aimDuration: 0.7
+  aimDuration: 0.4
   flashPeak: 40
   flashDuration: 0.4
   idleCam: {x: 0.029, y: -0.26, z: 0.241}
-  activeCam: {x: 0.005, y: -0.1, z: 0.35}
+  activeCam: {x: 0.01, y: -0.12, z: 0.35}
   Audio: {fileID: 9021669481541591278}
   FlashSound: {fileID: 8300000, guid: 5b822eaf6b2816c41a31c09b248622e0, type: 3}
   StepSound: {fileID: 8300000, guid: 7532bbbf9796110409519951691f27e9, type: 3}
