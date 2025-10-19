@@ -49,7 +49,11 @@ public class GameManager : MonoBehaviour
     {
         HandleFade();
 
-        if (Input.GetKeyDown(KeyCode.Escape)) ChangeScene("MainMenu");
+        if (Input.GetKeyDown(KeyCode.Escape)) 
+        {
+            ChangeScene("MainMenu");
+            RespawnPos = new Vector3 (0f,0f,0f);
+        }
     }
 
     void FixedUpdate()
