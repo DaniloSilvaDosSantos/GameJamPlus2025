@@ -73,7 +73,7 @@ public class PlayerControl : MonoBehaviour
 
         HandleAim();
 
-        if(attButton.WasPressedThisFrame() && fireCoolDown <= 0f) FireHandler();
+        if(attButton.WasPressedThisFrame() && aimState > 0.9f && fireCoolDown <= 0f) FireHandler();
     }
 
     void FixedUpdate()
