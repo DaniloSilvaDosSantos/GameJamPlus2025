@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AwakeTheDialog : MonoBehaviour
@@ -9,6 +10,9 @@ public class AwakeTheDialog : MonoBehaviour
     [SerializeField] private bool isRepeatable = false;
     [SerializeField] private float repeatCooldown = 15f;
     [SerializeField] private float delayDialog = 0.5f;
+
+    [Space]
+    [SerializeField] private bool isEndGame = false;
 
     private DialogBoxSystem dialogBox;
     private bool canTriggerAgain = true;
@@ -40,6 +44,13 @@ public class AwakeTheDialog : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if(isEndGame)
+        {
+            GameManager.GM.ChangeScene("MainMenu");
+
+            return;
+        }
+
         if (!canTriggerAgain) return;
         if (!other.CompareTag("Player")) return;
 
