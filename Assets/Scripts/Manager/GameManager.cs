@@ -27,9 +27,11 @@ public class GameManager : MonoBehaviour
     {
         GM = this;
         FadeScreen.gameObject.SetActive(true);
+
         RenderSettings.skybox = DuskSkybox;
         RenderSettings.ambientIntensity = 0.3f;
-        ChangeScene("IntroLevel");
+        ChangeScene("MainMenu");
+
     }
 
     public void NightTime()
