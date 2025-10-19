@@ -150,10 +150,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FadeScreen: {fileID: 1938795341}
   MainAudio: {fileID: 482333198}
+  DuskSkybox: {fileID: 2100000, guid: 9b2fedad999578040b488a55f2476836, type: 2}
+  NightSkybox: {fileID: 2100000, guid: 0eb5ec8fb122639438da64403731282a, type: 2}
   currentScene: 
   sceneToChange: 
   Fade: 0
-  Vol: 0.4
+  Vol: 1
   Pitch: 1
 --- !u!4 &309130012
 Transform:
@@ -216,7 +218,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 45aaef0d97d573d4196aa611da43dde7, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.478
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0

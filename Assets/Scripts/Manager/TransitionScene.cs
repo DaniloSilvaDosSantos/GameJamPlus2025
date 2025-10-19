@@ -7,6 +7,7 @@ public class TransitionScene : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             GameManager.GM.ChangeScene("GamePlay");
+            GameManager.GM.NightTime();
         }
     }
 }

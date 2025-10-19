@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Image FadeScreen;
     [SerializeField] private AudioSource MainAudio;
 
+    [SerializeField] private Material DuskSkybox;
+    [SerializeField] private Material NightSkybox;
+
     public string currentScene = "";
     public string sceneToChange = "";
 
@@ -24,7 +27,15 @@ public class GameManager : MonoBehaviour
     {
         GM = this;
         FadeScreen.gameObject.SetActive(true);
+        RenderSettings.skybox = DuskSkybox;
+        RenderSettings.ambientIntensity = 0.3f;
         ChangeScene("IntroLevel");
+    }
+
+    public void NightTime()
+    {
+        RenderSettings.skybox = NightSkybox;
+        RenderSettings.ambientIntensity = 0f;
     }
 
     void Update()
