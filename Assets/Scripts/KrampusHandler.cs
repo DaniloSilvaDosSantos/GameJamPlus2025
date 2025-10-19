@@ -22,6 +22,7 @@ public class KrampusHandler : MonoBehaviour
     public bool follower = false;
     public bool startle = false;
     public bool currentlyStartled = false;
+    public bool currentlyStalking = false;
     public bool screamed = false;
 
     [Header("Variáveis de comportamento")]
@@ -111,10 +112,11 @@ public class KrampusHandler : MonoBehaviour
                 AnimatorMove.SetBool("Stalking", true);
                 RB.linearVelocity = transform.forward*2f*stalkSpeed + new Vector3(0f, -1f, 0f);
             }
-            else if (playerDirection.magnitude > leapDist)
+            else if ((playerDirection.magnitude > leapDist && !currentlyStalking) || (playerDirection.magnitude > leapDist + 2))
             {
                 AnimatorMove.SetBool("Running", false);
                 AnimatorMove.SetBool("Stalking", true);
+                currentlyStalking = false;
                 if (!AS.isPlaying) AS.PlayOneShot(Slowstep, 0.5f);
                 RB.linearVelocity = transform.forward*stalkSpeed + new Vector3(0f, -1f, 0f);
             }
@@ -122,6 +124,7 @@ public class KrampusHandler : MonoBehaviour
             {
                 if (follower)
                 {
+                    currentlyStalking = true;
                     AnimatorMove.SetBool("Running", false);
                     AnimatorMove.SetBool("Stalking", false);
                     if (!screamed)
