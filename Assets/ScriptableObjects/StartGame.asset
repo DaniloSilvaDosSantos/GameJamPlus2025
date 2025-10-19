@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccc4db497d91dc9479638f55671cb389, type: 3}
-  m_Name: DialogTest01
+  m_Name: StartGame
   m_EditorClassIdentifier: 
   entries:
-  - textColor: {r: 1, g: 0, b: 0.018810749, a: 1}
-    text: Lorem Inpsun
+  - textColor: {r: 1, g: 1, b: 1, a: 1}
+    text: Ah, it's getting dark already. I lost track of time again...
+  - textColor: {r: 1, g: 1, b: 1, a: 1}
+    text: I guess I'll just take some pictures on the way back.

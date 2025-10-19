@@ -67,6 +67,7 @@ public class DialogBoxSystem : MonoBehaviour
 
         var entry = dialogData.entries[currentIndex];
         dialogText.text = entry.text;
+        dialogText.color = entry.textColor;
     }
 
     private IEnumerator ChangeDialog()
