@@ -48,6 +48,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         HandleFade();
+
+        if (Input.GetKeyDown(KeyCode.Escape)) ChangeScene("MainMenu");
     }
 
     void FixedUpdate()
