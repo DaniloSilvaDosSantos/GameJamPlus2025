@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager GM;
 
     [SerializeField] private Image FadeScreen;
+    [SerializeField] private Image DeathScreen;
     [SerializeField] private AudioSource MainAudio;
 
     [SerializeField] private Material DuskSkybox;
@@ -53,6 +54,14 @@ public class GameManager : MonoBehaviour
         {
             ChangeScene("MainMenu");
             RespawnPos = new Vector3 (0f,0f,0f);
+        }
+
+        var currColor = DeathScreen.color;
+
+        if (currColor.a > 0f)
+        {
+           currColor.a = Mathf.Max(currColor.a - 0.5f * Time.deltaTime, 0f);
+           DeathScreen.color = currColor;
         }
     }
 
@@ -107,6 +116,11 @@ public class GameManager : MonoBehaviour
         currentScene = sceneToChange;
         SceneManager.LoadScene(sceneToChange, LoadSceneMode.Additive);
         GameObject Player= GameObject.FindWithTag("Player");
+
+        float alpha = 1f;
+        Color currColor = DeathScreen.color;
+        currColor.a = alpha;
+        DeathScreen.color = currColor;
 
         if (RespawnPos != new Vector3(0f,0f,0f))
         {
