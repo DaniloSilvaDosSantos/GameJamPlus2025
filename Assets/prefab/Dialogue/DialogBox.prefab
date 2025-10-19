@@ -67,9 +67,9 @@ MonoBehaviour:
   dialogBoxGroup: {fileID: 7846250412420209839}
   dialogBoxArt: {fileID: 601829723571995118}
   dialogText: {fileID: 8871952663136011606}
-  fadeDuration: 0.25
-  scaleFactor: 1.05
-  scaleDuration: 0.05
+  fadeDuration: 0.3
+  scaleFactor: 1.025
+  scaleDuration: 0.15
   timeToPassDialog: 6
   dialogData: {fileID: 0}
 --- !u!114 &2456107283150691451
