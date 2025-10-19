@@ -236,6 +236,15 @@ public class PlayerControl : MonoBehaviour
                     RD.running = true;
                 }
             }
+            if (collider.gameObject.GetComponent<KrampusHandler>() != null)
+            {
+                KrampusHandler KD = collider.gameObject.GetComponent<KrampusHandler>();
+                if (KD.startle && ((transform.position - collider.transform.position).magnitude < KD.startleRange))
+                {
+                    KD.currentlyStartled = true;
+                    KD.DelayedRemove();
+                }
+            }
         }
 
         Flash.intensity = flashPeak;

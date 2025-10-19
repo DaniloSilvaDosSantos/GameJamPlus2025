@@ -51,6 +51,31 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1101 &-8016666423440064962
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Scared
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -8073596484747819548}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0.0000000062570256
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1102 &-4434762419865916988
 AnimatorState:
   serializedVersion: 6
@@ -179,6 +204,12 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
   - m_Name: Running
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: Scared
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -320,7 +351,7 @@ AnimatorStateMachine:
     m_Position: {x: 80, y: 310, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8073596484747819548}
-    m_Position: {x: 310, y: 220, z: 0}
+    m_Position: {x: 340, y: 150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4434762419865916988}
     m_Position: {x: 330, y: 350, z: 0}
@@ -328,7 +359,8 @@ AnimatorStateMachine:
     m_State: {fileID: 2339140282421186741}
     m_Position: {x: 580, y: 280, z: 0}
   m_ChildStateMachines: []
-  m_AnyStateTransitions: []
+  m_AnyStateTransitions:
+  - {fileID: -8016666423440064962}
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
