@@ -18,6 +18,7 @@ public class PlayerControl : MonoBehaviour
     private InputAction jumpButton;
     private InputAction attButton;
     private InputAction aimButton;
+    private InputAction sprintButton;
 
     private Vector2 LookAngle;
     private Vector2 MoveAngle;
@@ -107,6 +108,7 @@ public class PlayerControl : MonoBehaviour
         jumpButton = playerMap.FindAction("Jump");
         attButton = playerMap.FindAction("Attack");
         aimButton = playerMap.FindAction("Aim");
+        sprintButton = playerMap.FindAction("Sprint");
 
         InputActions.FindActionMap("Player").Enable();
     }
@@ -176,7 +178,11 @@ public class PlayerControl : MonoBehaviour
 
     void HandleAim()
     {
-        if (aimButton.IsPressed())
+        if (sprintButton.IsPressed())
+        {
+            aimState = Mathf.Max(aimState - Time.deltaTime/aimDuration, -0.5f);
+        }
+        else if (aimButton.IsPressed())
         {
             aimState = Mathf.Min(aimState + Time.deltaTime/aimDuration, 1f);
         }
@@ -204,6 +210,11 @@ public class PlayerControl : MonoBehaviour
     void HandleMovement()
     {
         Vector3 localMovementTarget = (MoveAngle.y * transform.forward + MoveAngle.x * transform.right) * movementSpeed / (1f*(aimState) + 1f);
+
+        if (sprintButton.IsPressed())
+        {
+            RB.linearVelocity += transform.up * -5f * Time.deltaTime;
+        }
 
         RB.linearVelocity = Vector3.SmoothDamp(RB.linearVelocity, localMovementTarget, ref pVelocity, movementDamping);
 

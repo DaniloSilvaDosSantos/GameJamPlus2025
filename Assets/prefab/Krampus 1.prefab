@@ -629,10 +629,11 @@ MonoBehaviour:
   follower: 0
   startle: 1
   currentlyStartled: 0
+  currentlyStalking: 0
   screamed: 0
-  stalkSpeed: 2.5
+  stalkSpeed: 4
   leapSpeed: 6
-  leapDist: 4
+  leapDist: 6
   startleRange: 8
   lifeTime: 25
 --- !u!54 &3060396091108197119
