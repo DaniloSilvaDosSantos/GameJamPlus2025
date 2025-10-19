@@ -8,6 +8,7 @@ public class AwakeTheDialog : MonoBehaviour
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private bool isRepeatable = false;
     [SerializeField] private float repeatCooldown = 15f;
+    [SerializeField] private float delayDialog = 0.5f;
 
     private DialogBoxSystem dialogBox;
     private bool canTriggerAgain = true;
@@ -43,7 +44,8 @@ public class AwakeTheDialog : MonoBehaviour
         if (!other.CompareTag("Player")) return;
 
         isPlayerInside = true;
-        AwakeDialog();
+
+        Invoke("AwakeDialog", delayDialog);
     }
 
     void OnTriggerExit(Collider other)
