@@ -16,6 +16,7 @@ public class PlayerControl : MonoBehaviour
     private InputAction lookDir;
     private InputAction jumpButton;
     private InputAction attButton;
+    private InputAction aimButton;
 
     private Vector2 LookAngle;
     private Vector2 MoveAngle;
@@ -24,6 +25,11 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private float lookSensX = 50f;
     [SerializeField] private float lookSensY = 50f;
 
+    [Header("Feld of View")]
+    [SerializeField] private float fovMin = 50f;
+    [SerializeField] private float fovMax = 70f;
+
+
     [Header("Variáveis de movimento")]
     [SerializeField] private float movementSpeed = 4f;
     [SerializeField] private float movementDamping = 2f;
@@ -31,8 +37,14 @@ public class PlayerControl : MonoBehaviour
     [Header("Flash da camera")]
     [SerializeField] private Light Flash;
     [SerializeField] private Transform SpotFlash;
+    [SerializeField] private Transform PhysCam;
+    [SerializeField] private Camera GraphCam;
+    [SerializeField] private float aimState = 0.0f;
+    [SerializeField] private float aimDuration = 0.4f;
     [SerializeField] private float flashPeak = 40f;
     [SerializeField] private float flashDuration = 0.2f;
+    [SerializeField] private Vector3 idleCam = new Vector3(0.029f, -0.26f, 0.241f);
+    [SerializeField] private Vector3 activeCam = new Vector3(0.029f, 0.26f, 0.241f);
 
     [Header("Audios")]
     [SerializeField] private AudioSource Audio;
@@ -59,6 +71,8 @@ public class PlayerControl : MonoBehaviour
 
         HandleLooking();
 
+        HandleAim();
+
         if(attButton.WasPressedThisFrame() && fireCoolDown <= 0f) FireHandler();
     }
 
@@ -67,6 +81,8 @@ public class PlayerControl : MonoBehaviour
         GatherFixedInputVariables();
 
         HandleCooldowns();
+
+        CheckGrounded();
 
         HandleMovement();
     }
@@ -79,6 +95,7 @@ public class PlayerControl : MonoBehaviour
         lookDir = playerMap.FindAction("Look");
         jumpButton = playerMap.FindAction("Jump");
         attButton = playerMap.FindAction("Attack");
+        aimButton = playerMap.FindAction("Aim");
 
         InputActions.FindActionMap("Player").Enable();
     }
@@ -104,6 +121,25 @@ public class PlayerControl : MonoBehaviour
         MoveAngle = moveDir.ReadValue<Vector2>();
     }
 
+    void CheckGrounded()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position - transform.up*.5f, 0.35f);
+        foreach (var collider in hitColliders)
+        {
+            if (collider != transform.GetComponent<Collider>())
+            {
+                Debug.Log("ground");
+                return;
+            }
+        }
+
+        Debug.Log("no ground");
+
+        MoveAngle = new Vector2 (0f,0f);
+        RB.linearVelocity += transform.up * -10f * Time.deltaTime;
+    }
+
+
     void HandleLooking()
     {
         transform.localRotation = Quaternion.Euler(transform.localEulerAngles.x, transform.localEulerAngles.y - (-LookAngle.x * (lookSensX/400f)), transform.localEulerAngles.z);
@@ -115,6 +151,18 @@ public class PlayerControl : MonoBehaviour
         headAngle = Mathf.Clamp(headAngle, -80f, 80f);
 
         Camera.localRotation = Quaternion.Euler(headAngle, Camera.localEulerAngles.y, Camera.localEulerAngles.z);
+    }
+
+    void HandleAim()
+    {
+        if (aimButton.IsPressed())
+        {
+            aimState = Mathf.Min(aimState + Time.deltaTime/aimDuration, 1f);
+        }
+        else aimState = Mathf.Max(aimState - Time.deltaTime/aimDuration, 0f);
+
+        GraphCam.fieldOfView = Mathf.Lerp(fovMax, fovMin, aimState);
+        PhysCam.localPosition = Vector3.Lerp(idleCam, activeCam, aimState);
     }
 
     void HandleCooldowns()
@@ -134,11 +182,15 @@ public class PlayerControl : MonoBehaviour
 
     void HandleMovement()
     {
-        Vector3 localMovementTarget = (MoveAngle.y * transform.forward + MoveAngle.x * transform.right) * movementSpeed;
+        Vector3 localMovementTarget = (MoveAngle.y * transform.forward + MoveAngle.x * transform.right) * movementSpeed / (1f*(aimState) + 1f);
 
         RB.linearVelocity = Vector3.SmoothDamp(RB.linearVelocity, localMovementTarget, ref pVelocity, movementDamping);
 
-        if (RB.linearVelocity.magnitude > 0.5f && !Audio.isPlaying) Audio.PlayOneShot(StepSound, 0.7F);
+        if (RB.linearVelocity.magnitude > 0.5f && !Audio.isPlaying) 
+        {
+            Audio.pitch = Random.Range(0.8f, 1.5f);
+            Audio.PlayOneShot(StepSound, 0.7F);
+        }
     }
 
     void FireHandler()
