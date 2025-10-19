@@ -1972,14 +1972,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogBox
       objectReference: {fileID: 0}
-    - target: {fileID: 2456107283150691451, guid: b7e70bb57f35efb4abbf3060d50fb944, type: 3}
-      propertyPath: dialogData
-      value: 
-      objectReference: {fileID: 11400000, guid: 01cabb73b42423340b7f8735cd9da6eb, type: 2}
-    - target: {fileID: 2456107283150691451, guid: b7e70bb57f35efb4abbf3060d50fb944, type: 3}
-      propertyPath: dialogBoxSystem
-      value: 
-      objectReference: {fileID: 799835440}
     - target: {fileID: 2602760517231008133, guid: b7e70bb57f35efb4abbf3060d50fb944, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2070,17 +2062,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2602760517231008133, guid: b7e70bb57f35efb4abbf3060d50fb944, type: 3}
   m_PrefabInstance: {fileID: 799835438}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &799835440 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4304573236123994781, guid: b7e70bb57f35efb4abbf3060d50fb944, type: 3}
-  m_PrefabInstance: {fileID: 799835438}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1e917e2b1d52a14ea89cfee98a8ed26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &808825116 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5608904214337833759, guid: 7ae71a9b4c497ed44bae5535d3fd3ba0, type: 3}
