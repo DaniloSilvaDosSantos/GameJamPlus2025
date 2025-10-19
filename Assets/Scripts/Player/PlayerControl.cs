@@ -30,6 +30,12 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private float fovMin = 50f;
     [SerializeField] private float fovMax = 70f;
 
+    [Header("Cam Shake")]
+    private Vector3 startCamPos;
+    private float shakeAmount = 0f;
+    [SerializeField] private float shakeReduct = 100f;
+    [SerializeField] private float shakeMax = 100f;
+
 
     [Header("Variáveis de movimento")]
     [SerializeField] private float movementSpeed = 4f;
@@ -64,6 +70,8 @@ public class PlayerControl : MonoBehaviour
     void Awake()
     {
         MouseRemoval();
+
+        startCamPos = Camera.localPosition;
     }
 
     void Update()
@@ -71,6 +79,8 @@ public class PlayerControl : MonoBehaviour
         GatherInputVariables();
 
         HandleLooking();
+
+        CamShake();
 
         HandleAim();
 
@@ -152,6 +162,18 @@ public class PlayerControl : MonoBehaviour
         Camera.localRotation = Quaternion.Euler(headAngle, Camera.localEulerAngles.y, Camera.localEulerAngles.z);
     }
 
+    private void CamShake()
+    {
+        if (shakeAmount > 0f)
+        {
+            shakeAmount = Mathf.Clamp((shakeAmount - shakeReduct * Time.deltaTime), 0f, shakeMax);
+        }
+
+        Camera.localPosition = Vector3.Slerp(startCamPos, Camera.localPosition, 0.9f);
+
+        Camera.localPosition += new Vector3(Random.Range(-0.5f, 0.5f) * (shakeAmount)/300, Random.Range(-0.5f, 0.5f) * (shakeAmount)/300, 0);
+    }
+
     void HandleAim()
     {
         if (aimButton.IsPressed())
@@ -185,10 +207,14 @@ public class PlayerControl : MonoBehaviour
 
         RB.linearVelocity = Vector3.SmoothDamp(RB.linearVelocity, localMovementTarget, ref pVelocity, movementDamping);
 
-        if (RB.linearVelocity.magnitude > 0.5f && !Audio.isPlaying) 
+        if (RB.linearVelocity.magnitude > 1f) 
         {
-            Audio.pitch = Random.Range(0.8f, 1.5f);
-            Audio.PlayOneShot(StepSound, 0.7F);
+            shakeAmount = RB.linearVelocity.magnitude * 2;
+            if (!Audio.isPlaying)
+            {
+                Audio.pitch = Random.Range(0.8f, 1.5f);
+                Audio.PlayOneShot(StepSound, 0.7F);
+            }
         }
     }
 
