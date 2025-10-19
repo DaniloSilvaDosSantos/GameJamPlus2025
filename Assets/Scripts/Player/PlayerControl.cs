@@ -224,10 +224,18 @@ public class PlayerControl : MonoBehaviour
 
         Audio.PlayOneShot(FlashSound, 0.7F);
 
-        Collider[] hitColliders = Physics.OverlapSphere(SpotFlash.position, 2.5f, Mobs);
+        Collider[] hitColliders = Physics.OverlapSphere(SpotFlash.position, 6f, Mobs);
         foreach (var collider in hitColliders)
         {
-            Destroy(collider.gameObject);
+            if (collider.gameObject.GetComponent<RunningDeer>() != null)
+            {
+                RunningDeer RD = collider.gameObject.GetComponent<RunningDeer>();
+                if (RD.startle)
+                {
+                    RD.willDeerSappear = true;
+                    RD.running = true;
+                }
+            }
         }
 
         Flash.intensity = flashPeak;

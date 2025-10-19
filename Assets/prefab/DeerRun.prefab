@@ -260,7 +260,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 192
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -282,6 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   running: 1
   willDeerSappear: 1
+  startle: 0
   timer: 5
   RB: {fileID: 6732950539955241910}
   Audio: {fileID: 8889182939144359441}
