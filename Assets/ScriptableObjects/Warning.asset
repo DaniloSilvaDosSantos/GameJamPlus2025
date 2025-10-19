@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccc4db497d91dc9479638f55671cb389, type: 3}
   m_Name: Warning
   m_EditorClassIdentifier: 
-  entries: []
+  entries:
+  - textColor: {r: 0.6037736, g: 0.048415814, b: 0.048415814, a: 1}
+    text: Be careful. It lurks in the dark. Use your camera flash when it gets too
+      close.

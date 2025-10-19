@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: DialogTest01
   m_EditorClassIdentifier: 
   entries:
-  - text: Lorem Inpsun
+  - textColor: {r: 1, g: 0, b: 0.018810749, a: 1}
+    text: Lorem Inpsun
