@@ -154,6 +154,7 @@ MonoBehaviour:
   NightSkybox: {fileID: 2100000, guid: 0eb5ec8fb122639438da64403731282a, type: 2}
   currentScene: 
   sceneToChange: 
+  RespawnPos: {x: 0, y: 0, z: 0}
   Fade: 0
   Vol: 1
   Pitch: 1
@@ -217,10 +218,10 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 45aaef0d97d573d4196aa611da43dde7, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -461,7 +462,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 15
   m_TargetDisplay: 0
 --- !u!224 &1746115034
 RectTransform:

@@ -236,6 +236,11 @@ public class PlayerControl : MonoBehaviour
                     RD.running = true;
                 }
             }
+            if (collider.gameObject.CompareTag("Enemy"))
+            {
+                GameManager.GM.ChangeScene("GamePlay");
+                GameManager.GM.NightTime();
+            }
             if (collider.gameObject.GetComponent<KrampusHandler>() != null)
             {
                 KrampusHandler KD = collider.gameObject.GetComponent<KrampusHandler>();

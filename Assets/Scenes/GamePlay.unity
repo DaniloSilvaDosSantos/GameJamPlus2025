@@ -2498,6 +2498,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 9.3
       objectReference: {fileID: 0}
+    - target: {fileID: 1633181097587066203, guid: ccfc67387985d0641b4993198e121581, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5892296860954339790, guid: ccfc67387985d0641b4993198e121581, type: 3}
       propertyPath: m_LocalPosition.x
       value: -29.3

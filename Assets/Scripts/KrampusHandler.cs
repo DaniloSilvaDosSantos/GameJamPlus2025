@@ -85,7 +85,7 @@ public class KrampusHandler : MonoBehaviour
         transform.rotation = rotation;
 
 
-        if (playerDirection.magnitude > 1.5f)
+        if (playerDirection.magnitude < 1.5f)
             {
                 GameManager.GM.RestartLevel();
             }

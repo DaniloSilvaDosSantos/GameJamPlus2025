@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5892296860954339790}
   - component: {fileID: 2592540829512317546}
   - component: {fileID: 8383534408305868860}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AudioTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

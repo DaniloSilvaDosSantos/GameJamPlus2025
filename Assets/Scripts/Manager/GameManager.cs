@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         GM = this;
         FadeScreen.gameObject.SetActive(true);
 
@@ -38,6 +40,7 @@ public class GameManager : MonoBehaviour
 
     public void NightTime()
     {
+        Vol = 0f;
         RenderSettings.skybox = NightSkybox;
         RenderSettings.ambientIntensity = 0f;
     }
