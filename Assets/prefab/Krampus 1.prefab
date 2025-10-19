@@ -620,7 +620,7 @@ MonoBehaviour:
   AnimatorMove: {fileID: 8327029816142146395}
   AS: {fileID: 64049345684874255}
   ASS: {fileID: 1222748453509172561}
-  Slowstep: {fileID: 8300000, guid: 95f01f91a2ae3ba4b8a073d47cabe333, type: 3}
+  Slowstep: {fileID: 8300000, guid: e976babe579f4cb4e9d20e71ffb9dfb2, type: 3}
   Faststep: {fileID: 8300000, guid: cf44b2024d985b440af2d648bb80ea88, type: 3}
   Scream1: {fileID: 8300000, guid: 2b0cb7b92186ca1459b2c9e5c246c9bb, type: 3}
   Scream2: {fileID: 8300000, guid: 6d48b5e316802704fa38e1a56635e14f, type: 3}
