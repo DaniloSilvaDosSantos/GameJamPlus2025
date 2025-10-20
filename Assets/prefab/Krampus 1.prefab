@@ -620,7 +620,7 @@ MonoBehaviour:
   AnimatorMove: {fileID: 8327029816142146395}
   AS: {fileID: 64049345684874255}
   ASS: {fileID: 1222748453509172561}
-  Slowstep: {fileID: 8300000, guid: e976babe579f4cb4e9d20e71ffb9dfb2, type: 3}
+  Slowstep: {fileID: 8300000, guid: 95f01f91a2ae3ba4b8a073d47cabe333, type: 3}
   Faststep: {fileID: 8300000, guid: cf44b2024d985b440af2d648bb80ea88, type: 3}
   Scream1: {fileID: 8300000, guid: 2b0cb7b92186ca1459b2c9e5c246c9bb, type: 3}
   Scream2: {fileID: 8300000, guid: 6d48b5e316802704fa38e1a56635e14f, type: 3}
@@ -632,8 +632,8 @@ MonoBehaviour:
   currentlyStalking: 0
   screamed: 0
   stalkSpeed: 4
-  leapSpeed: 6
-  leapDist: 6
+  leapSpeed: 8
+  leapDist: 5
   startleRange: 7
   lifeTime: 25
 --- !u!54 &3060396091108197119
@@ -683,7 +683,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 1.1, z: 0}
 --- !u!4 &744885704245901683 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cdedf0361a7fe4848a7569bd6553a8eb, type: 3}

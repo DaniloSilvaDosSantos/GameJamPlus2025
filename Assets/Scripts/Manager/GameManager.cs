@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Image FadeScreen;
     [SerializeField] private Image DeathScreen;
-    [SerializeField] private AudioSource MainAudio;
+    public AudioSource MainAudio;
+    [SerializeField] private AudioSource DeathAudio;
 
     [SerializeField] private Material DuskSkybox;
     [SerializeField] private Material NightSkybox;
@@ -22,7 +23,9 @@ public class GameManager : MonoBehaviour
     public Vector3 RespawnPos = new Vector3 (0f,0f,0f);
 
     public bool Fade = false;
+    public bool Dead = false;
 
+    public float ChangeSpeed = 2f;
     public float Vol = 1f;
     public float Pitch = 1f;
 
@@ -44,6 +47,25 @@ public class GameManager : MonoBehaviour
         Vol = 0f;
         RenderSettings.skybox = NightSkybox;
         RenderSettings.ambientIntensity = 0f;
+
+        if (currentScene != "") SceneManager.UnloadSceneAsync(currentScene);
+        currentScene = "GamePlay";
+        SceneManager.LoadScene("GamePlay", LoadSceneMode.Additive);
+        GameObject Player= GameObject.FindWithTag("Player");
+
+        Fade = true;
+        FadeScreen.enabled = true;
+
+        DeathAudio.Play();
+
+        float alpha = 1f;
+        Color currColor = DeathScreen.color;
+        currColor = FadeScreen.color;
+        currColor.a = alpha;
+        FadeScreen.color = currColor;
+        RespawnPos = Player.transform.position;
+
+        Invoke("AliveAgain", 3f);
     }
 
     void Update()
@@ -73,8 +95,23 @@ public class GameManager : MonoBehaviour
 
     void SoundSettings()
     {
-        MainAudio.pitch = Mathf.Lerp(MainAudio.pitch, Pitch, 0.5f * Time.deltaTime);
-        MainAudio.volume = Mathf.Lerp(MainAudio.volume, Vol, 0.5f * Time.deltaTime);
+        if (Pitch < MainAudio.pitch)
+        {
+           MainAudio.pitch = Mathf.Max(MainAudio.pitch - ChangeSpeed*Time.deltaTime, Pitch);
+        }
+        if (Pitch > MainAudio.pitch)
+        {
+           MainAudio.pitch = Mathf.Min(MainAudio.pitch + ChangeSpeed*Time.deltaTime, Pitch);
+        }
+
+        if (Vol < MainAudio.volume)
+        {
+           MainAudio.volume = Mathf.Max(MainAudio.volume - ChangeSpeed*Time.deltaTime, Vol);
+        }
+        if (Vol > MainAudio.volume)
+        {
+           MainAudio.volume = Mathf.Min(MainAudio.volume + ChangeSpeed*Time.deltaTime, Vol);
+        }
     }
 
     void HandleFade()
@@ -113,19 +150,36 @@ public class GameManager : MonoBehaviour
     public void RestartLevel()
     {
         if (currentScene != "") SceneManager.UnloadSceneAsync(currentScene);
-        currentScene = sceneToChange;
-        SceneManager.LoadScene(sceneToChange, LoadSceneMode.Additive);
+        currentScene = "GamePlay";
+        SceneManager.LoadScene("GamePlay", LoadSceneMode.Additive);
         GameObject Player= GameObject.FindWithTag("Player");
+
+        Dead = true;
+        Fade = true;
+        FadeScreen.enabled = true;
+
+        DeathAudio.Play();
 
         float alpha = 1f;
         Color currColor = DeathScreen.color;
         currColor.a = alpha;
         DeathScreen.color = currColor;
+        currColor = FadeScreen.color;
+        currColor.a = alpha;
+        FadeScreen.color = currColor;
 
         if (RespawnPos != new Vector3(0f,0f,0f))
         {
             Player.transform.position = RespawnPos;
         }
+
+        Invoke("AliveAgain", 3f);
+    }
+
+    void AliveAgain()
+    {
+        Dead = false;
+        Fade = false;
     }
 
     public void DoTheSceneChange()
