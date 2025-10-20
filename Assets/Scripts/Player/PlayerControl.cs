@@ -229,6 +229,11 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
+    void NightTransition()
+    {
+        GameManager.GM.NightTime();
+    }
+
     void FireHandler()
     {
         fireCoolDown = fireDelay;
@@ -249,8 +254,7 @@ public class PlayerControl : MonoBehaviour
             }
             if (collider.gameObject.CompareTag("Enemy") && (collider.gameObject.transform.position - transform.position).magnitude < 10f)
             {
-                //GameManager.GM.ChangeScene("GamePlay");
-                GameManager.GM.NightTime();
+                Invoke("NightTransition", 0.4f);
             }
             if (collider.gameObject.GetComponent<KrampusHandler>() != null)
             {

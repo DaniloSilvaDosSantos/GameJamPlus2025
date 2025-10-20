@@ -65,6 +65,11 @@ public class KrampusHandler : MonoBehaviour
         ASS.PlayOneShot(Scream2);
     }
 
+    void KillPlayer()
+    {
+        GameManager.GM.RestartLevel();
+    }
+
     void HandlePlayerChase()
     {
         if (Player == null)
@@ -87,9 +92,9 @@ public class KrampusHandler : MonoBehaviour
 
 
         if (playerDirection.magnitude < 1.5f)
-            {
-                GameManager.GM.RestartLevel();
-            }
+        {
+            Invoke("KillPlayer", 0.4f);
+        }
 
         if (currentlyStartled)
         {
