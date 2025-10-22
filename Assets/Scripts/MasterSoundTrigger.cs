@@ -22,7 +22,7 @@ public class MasterSoundTrigger : MonoBehaviour
 
     void TriggerAction()
     {
-        GameManager.GM.ChangeSpeed = 1f/speed * Mathf.Min(Mathf.Max(vol, GameManager.GM.Vol), 0.2f);
+        GameManager.GM.ChangeSpeed = 1f/speed * Mathf.Max(Mathf.Max(vol, GameManager.GM.Vol), 0.2f);
         GameManager.GM.Vol = vol;
         GameManager.GM.Pitch = pitch;
 

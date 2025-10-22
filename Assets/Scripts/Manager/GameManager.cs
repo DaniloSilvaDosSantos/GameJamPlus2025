@@ -60,10 +60,9 @@ public class GameManager : MonoBehaviour
 
         float alpha = 1f;
         Color currColor = DeathScreen.color;
-        currColor = FadeScreen.color;
+        currColor = Color.white;
         currColor.a = alpha;
         FadeScreen.color = currColor;
-        RespawnPos = Player.transform.position;
 
         Invoke("AliveAgain", 3f);
     }
@@ -74,6 +73,14 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
+            if (currentScene == "MainMenu")
+            {
+                Application.Quit();
+                #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+                #endif
+            }
+            Invoke("Daytime", 2f);
             ChangeScene("MainMenu");
             RespawnPos = new Vector3 (0f,0f,0f);
         }
@@ -85,6 +92,12 @@ public class GameManager : MonoBehaviour
            currColor.a = Mathf.Max(currColor.a - 0.5f * Time.deltaTime, 0f);
            DeathScreen.color = currColor;
         }
+    }
+
+    void Daytime()
+    {
+        RenderSettings.skybox = DuskSkybox;
+        RenderSettings.ambientIntensity = 0.3f;
     }
 
     void FixedUpdate()
@@ -156,6 +169,7 @@ public class GameManager : MonoBehaviour
 
         Dead = true;
         Fade = true;
+        FadeScreen.color = Color.black;
         FadeScreen.enabled = true;
 
         DeathAudio.Play();
@@ -180,6 +194,13 @@ public class GameManager : MonoBehaviour
     {
         Dead = false;
         Fade = false;
+
+        Invoke("ReturnFade", 1f);
+    }
+
+    void ReturnFade()
+    {
+        FadeScreen.color = Color.black;
     }
 
     public void DoTheSceneChange()

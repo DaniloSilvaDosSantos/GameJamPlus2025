@@ -33,9 +33,13 @@ public class PlayerControl : MonoBehaviour
 
     [Header("Cam Shake")]
     private Vector3 startCamPos;
+    private Vector3 randomBob;
+    private Vector3 targetShake;
     private float shakeAmount = 0f;
+    private Vector3 velBob;
     [SerializeField] private float shakeReduct = 100f;
     [SerializeField] private float shakeMax = 100f;
+    [SerializeField] private float shakeRate = 0.3f;
 
 
     [Header("Variáveis de movimento")]
@@ -71,6 +75,8 @@ public class PlayerControl : MonoBehaviour
     void Awake()
     {
         MouseRemoval();
+
+        InvokeRepeating("RefreshViewBobTarget", 0.2f, 0.2f);
 
         startCamPos = Camera.localPosition;
     }
@@ -168,12 +174,19 @@ public class PlayerControl : MonoBehaviour
     {
         if (shakeAmount > 0f)
         {
-            shakeAmount = Mathf.Clamp((shakeAmount - shakeReduct * Time.deltaTime), 0f, shakeMax);
+            shakeAmount = Mathf.Clamp((shakeAmount - (shakeReduct * Time.deltaTime)), 0f, shakeMax);
         }
 
-        Camera.localPosition = Vector3.Slerp(startCamPos, Camera.localPosition, 0.9f);
 
-        Camera.localPosition += new Vector3(Random.Range(-0.5f, 0.5f) * (shakeAmount)/300, Random.Range(-0.5f, 0.5f) * (shakeAmount)/300, 0);
+        targetShake = Vector3.SmoothDamp(targetShake, randomBob, ref velBob, shakeRate); 
+
+        Camera.localPosition = startCamPos + targetShake;
+
+    }
+
+    void RefreshViewBobTarget()
+    {
+        randomBob = new Vector3(Random.Range(-1f, 1f) * (shakeAmount)/30, Random.Range(-1f, 1f) * (shakeAmount)/30, 0);
     }
 
     void HandleAim()
@@ -224,13 +237,14 @@ public class PlayerControl : MonoBehaviour
             if (!Audio.isPlaying)
             {
                 Audio.pitch = Random.Range(0.8f, 1.5f);
-                Audio.PlayOneShot(StepSound, 0.7F);
+                Audio.PlayOneShot(StepSound, 0.35f);
             }
         }
     }
 
     void NightTransition()
     {
+        GameManager.GM.RespawnPos = transform.position;
         GameManager.GM.NightTime();
     }
 
@@ -240,7 +254,7 @@ public class PlayerControl : MonoBehaviour
 
         Audio.PlayOneShot(FlashSound, 0.7F);
 
-        Collider[] hitColliders = Physics.OverlapSphere(SpotFlash.position, 6f, Mobs);
+        Collider[] hitColliders = Physics.OverlapCapsule(SpotFlash.position, SpotFlash.position + (Camera.forward * 10f), 3f, Mobs);
         foreach (var collider in hitColliders)
         {
             if (collider.gameObject.GetComponent<RunningDeer>() != null)

@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8782867657676325748, guid: b5a02b8d85ab1874480c2388a1f2f4c5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 77f95051e495b3c4786486e44d862949, type: 2}
     - target: {fileID: -8679921383154817045, guid: b5a02b8d85ab1874480c2388a1f2f4c5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.9447501
@@ -52,6 +56,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: KrampusCape
       objectReference: {fileID: 0}
+    - target: {fileID: 7202271454713460447, guid: b5a02b8d85ab1874480c2388a1f2f4c5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 605476c42bd76054cb030b83d050bd77, type: 2}
+    - target: {fileID: 7926839288223873370, guid: b5a02b8d85ab1874480c2388a1f2f4c5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: fb6506601e627264680bd2aae4124292, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
