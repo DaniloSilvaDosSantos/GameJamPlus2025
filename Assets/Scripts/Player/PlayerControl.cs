@@ -36,6 +36,7 @@ public class PlayerControl : MonoBehaviour
     private Vector3 randomBob;
     private Vector3 targetShake;
     private float shakeAmount = 0f;
+    private float currAngles = 0f;
     private Vector3 velBob;
     [SerializeField] private float shakeReduct = 100f;
     [SerializeField] private float shakeMax = 100f;
@@ -76,7 +77,7 @@ public class PlayerControl : MonoBehaviour
     {
         MouseRemoval();
 
-        InvokeRepeating("RefreshViewBobTarget", 0.2f, 0.2f);
+        //InvokeRepeating("RefreshViewBobTarget", 0.05f, 0.05f);
 
         startCamPos = Camera.localPosition;
     }
@@ -177,6 +178,10 @@ public class PlayerControl : MonoBehaviour
             shakeAmount = Mathf.Clamp((shakeAmount - (shakeReduct * Time.deltaTime)), 0f, shakeMax);
         }
 
+        currAngles += Time.deltaTime * shakeAmount;
+        //if(currAngles >= 4f) currAngles -= 4f;
+
+        randomBob = (Mathf.Sin(currAngles) * shakeAmount/20f * Vector3.right) + (Mathf.Cos(currAngles*2f) * shakeAmount/20f  * Vector3.up);
 
         targetShake = Vector3.SmoothDamp(targetShake, randomBob, ref velBob, shakeRate); 
 
@@ -184,10 +189,10 @@ public class PlayerControl : MonoBehaviour
 
     }
 
-    void RefreshViewBobTarget()
-    {
-        randomBob = new Vector3(Random.Range(-1f, 1f) * (shakeAmount)/30, Random.Range(-1f, 1f) * (shakeAmount)/30, 0);
-    }
+    //void RefreshViewBobTarget()
+    //{
+    //    randomBob = new Vector3(Random.Range(-1f, 1f) * (shakeAmount)/30, Random.Range(-1f, 1f) * (shakeAmount)/30, 0);
+    //}
 
     void HandleAim()
     {
