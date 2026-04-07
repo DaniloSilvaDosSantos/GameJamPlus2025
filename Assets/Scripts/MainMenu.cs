@@ -41,10 +41,10 @@ public class MainMenu : MonoBehaviour
         {
             menuButtons[currentButtonIndex].onClick.Invoke();
         }
-        if (Input.GetMouseButton(0))
-        {
-            Cursor.visible = false;
-        }
+        //if (Input.GetMouseButton(0))
+        //{
+        //    Cursor.visible = false;
+        //}
     }
 
     void HandleNavigation()
