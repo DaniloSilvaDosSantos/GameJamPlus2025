@@ -143,15 +143,56 @@ public class PlayerControl : MonoBehaviour
 
     void CheckGrounded()
     {
+        bool grounded = false;
         Collider[] hitColliders = Physics.OverlapSphere(transform.position - transform.up*.3f, 0.3f, Default);
         foreach (var collider in hitColliders)
         {
             if (collider != transform.GetComponent<Collider>())
             {
                 RB.linearVelocity += transform.up * -1f * Time.deltaTime;
-                return;
+                grounded = true;
             }
         }
+
+        if (MoveAngle.magnitude > 0.5f)
+        {
+            Vector3 obsPos = transform.position + ((transform.forward * MoveAngle.y * 0.4f) - (transform.up * 0.26f) + (transform.right * MoveAngle.x * 0.4f));
+
+            bool hasledge = false;
+
+            hitColliders = Physics.OverlapSphere(obsPos, 0.2f, Default);
+            foreach (var collider in hitColliders)
+            {
+                if (collider != transform.GetComponent<Collider>())
+                {
+                    hasledge = true;
+                    break;
+                }
+            }
+
+            if (hasledge)
+            {
+                bool hasWall = false;
+                hitColliders = Physics.OverlapSphere(obsPos + (transform.up * 0.7f), 0.3f, Default);
+                foreach (var collider in hitColliders)
+                {
+                    if (collider != transform.GetComponent<Collider>())
+                    {
+                        hasWall = true;
+                        break;
+                    }
+                }
+
+                if(!hasWall)
+                {
+                    RB.linearVelocity += transform.up * 2f * Time.deltaTime;
+                    if(RB.linearVelocity.y >2f) RB.linearVelocity = new Vector3(RB.linearVelocity.x, 2f, RB.linearVelocity.z);
+                    return;
+                }
+            }
+        }
+
+        if (grounded) return;
 
         MoveAngle = new Vector2 (0f,0f);
         RB.linearVelocity += transform.up * -10f * Time.deltaTime;
@@ -178,10 +219,10 @@ public class PlayerControl : MonoBehaviour
             shakeAmount = Mathf.Clamp((shakeAmount - (shakeReduct * Time.deltaTime)), 0f, shakeMax);
         }
 
-        currAngles += Time.deltaTime * shakeAmount;
+        currAngles += Time.deltaTime * shakeAmount*0.75f;
         //if(currAngles >= 4f) currAngles -= 4f;
 
-        randomBob = (Mathf.Sin(currAngles) * shakeAmount/20f * Vector3.right) + (Mathf.Cos(currAngles*2f) * shakeAmount/20f  * Vector3.up);
+        randomBob = (Mathf.Sin(currAngles) * shakeAmount/30f * Vector3.right) + (Mathf.Cos(currAngles*2f) * shakeAmount/50f  * Vector3.up);
 
         targetShake = Vector3.SmoothDamp(targetShake, randomBob, ref velBob, shakeRate); 
 

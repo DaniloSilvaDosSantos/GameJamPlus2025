@@ -373,7 +373,7 @@ MonoBehaviour:
   fovMax: 70
   shakeReduct: 10
   shakeMax: 200
-  shakeRate: 0.1
+  shakeRate: 0.18
   movementSpeed: 2.25
   movementDamping: 0.2
   Flash: {fileID: 7591554438179118289}

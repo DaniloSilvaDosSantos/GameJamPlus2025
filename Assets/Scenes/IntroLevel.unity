@@ -983,10 +983,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4993233793372473178, guid: 455d35e355315744d94b5c07015ede80, type: 3}
-      propertyPath: shakeRate
-      value: 0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 9021669481541591278, guid: 455d35e355315744d94b5c07015ede80, type: 3}
       propertyPath: m_Volume
       value: 0.648
