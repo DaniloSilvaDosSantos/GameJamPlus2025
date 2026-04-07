@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
 
     public Vector3 RespawnPos = new Vector3 (0f,0f,0f);
 
+    public GameObject Player = null;
+
     public bool Fade = false;
     public bool Dead = false;
 
@@ -165,7 +167,6 @@ public class GameManager : MonoBehaviour
         if (currentScene != "") SceneManager.UnloadSceneAsync(currentScene);
         currentScene = "GamePlay";
         SceneManager.LoadScene("GamePlay", LoadSceneMode.Additive);
-        GameObject Player= GameObject.FindWithTag("Player");
 
         Dead = true;
         Fade = true;
@@ -182,20 +183,25 @@ public class GameManager : MonoBehaviour
         currColor.a = alpha;
         FadeScreen.color = currColor;
 
-        if (RespawnPos != new Vector3(0f,0f,0f))
-        {
-            Player.transform.position = RespawnPos;
-        }
-
         Invoke("AliveAgain", 3f);
+
+        Invoke("Reassign", 2f);
     }
 
     void AliveAgain()
     {
         Dead = false;
         Fade = false;
-
         Invoke("ReturnFade", 1f);
+    }
+
+    void Reassign()
+    {
+        Player= GameObject.FindWithTag("Player");
+        if (RespawnPos != Vector3.zero)
+        {
+            Player.transform.position = RespawnPos;
+        }
     }
 
     void ReturnFade()
