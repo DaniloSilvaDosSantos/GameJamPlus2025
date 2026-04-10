@@ -12,6 +12,26 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: MADEIRA
+    second: {fileID: 2100000, guid: f2eea5dfe1596db44b33389e6a7228f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: c6b184b85022fd645b86ce17ecf75905, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PortaCaida
+    second: {fileID: 2100000, guid: 399572c991b517b46b34e6b8b1a9d35d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PrePedra
+    second: {fileID: 2100000, guid: 89579dad1a2e41b439aad57530a16bee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Teto
     second: {fileID: 2100000, guid: 5f2d5f86e41c3cd4b9cc923841bd8779, type: 2}
   - first:
@@ -22,38 +42,133 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: cast_iron_fp_mat
+    second: {fileID: 2100000, guid: 376e682aa366c8a4e97b6c59617933de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chao
+    second: {fileID: 2100000, guid: 58ebfe1dd055c7b43b0d8161b53e7c02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: door_material.001
+    second: {fileID: 2100000, guid: a61d15288643f77458516381605d1a15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: door_material.002
+    second: {fileID: 2100000, guid: 996bdbce054abb44ba7d105c6d883b2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: janelas
     second: {fileID: 2100000, guid: 622b85cdb62d6d04da1b5a44e2b9e481, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: parede bonita
+    second: {fileID: 2100000, guid: ffe46a99e3c7548429a67568d28b00f9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: pedinhastop
     second: {fileID: 2100000, guid: 14975487945ecb045a59fc00c450f007, type: 2}
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: picture8_texture
+    second: {fileID: 2100000, guid: 2cd5b732bc36025449a485f5f43d73da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood_fp_mat
+    second: {fileID: 2100000, guid: 768a66ef3180385418c6eb29cb171caa, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Bricaida
-    second: {fileID: 2800000, guid: f99897b7c504e6d47b32c276cb5a1ee9, type: 3}
+    second: {fileID: 2800000, guid: fa13ffe4c96ec234ab2e064dfff4642e, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: NovoBricks_08-128x128
-    second: {fileID: 2800000, guid: 326a9d6723e5a00449b615267790bc8b, type: 3}
+    second: {fileID: 2800000, guid: 9a479071a4f3eab41b1116e05dfb5b10, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Sand_04
+    second: {fileID: 2800000, guid: d7e0b4c9164e35242adb1828369e25f8, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: T_Window_Rusty_000_a
-    second: {fileID: 2800000, guid: c33bc7eb759bb434183b1cd2222cfe91, type: 3}
+    second: {fileID: 2800000, guid: a8aa25e7540dc1749bed4ed9d23ccb36, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: TijolinhoTopRoofs_21-128x128
-    second: {fileID: 2800000, guid: 0a5b99e513c29be479161beaa814f084, type: 3}
+    second: {fileID: 2800000, guid: d154c6fc90b19e641a699d9d5e7076b4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood_11-128x128
+    second: {fileID: 2800000, guid: 8485229a74a5620479bcc0fd9219355a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood_22-128x128
+    second: {fileID: 2800000, guid: df24c229c6bf8d34bab1878eea0e0940, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: banisterbase_texture
+    second: {fileID: 2800000, guid: 3f782dbb91b11ae4398f627494aabb13, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: chao1
+    second: {fileID: 2800000, guid: 4e8d6e5a9e7c45744b83d39879407618, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: door_texture
+    second: {fileID: 2800000, guid: af72fa48f433fc94c8b191aaf4b70c3a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: fireplace_cast_iron_fp_mat_BaseColor
+    second: {fileID: 2800000, guid: f7fa5f951adb5f447abd27e2a83b1cd9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: fireplace_cast_iron_fp_mat_Normal
+    second: {fileID: 2800000, guid: 3f65e9aeab473214e9fb2532061c1a58, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: fireplace_wood_fp_mat_BaseColor
+    second: {fileID: 2800000, guid: e8f22ecb4a9585e428166a1cd33636b1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: fireplace_wood_fp_mat_Normal
+    second: {fileID: 2800000, guid: ecf474c01eb6de246a1f9a97c5385251, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: paredebonita
+    second: {fileID: 2800000, guid: 94275f89a66c6ab48865c5e4fe94b52e, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: pedrinhatop
-    second: {fileID: 2800000, guid: e3a404d1ede2c5e4fb01e0f98cd79f24, type: 3}
+    second: {fileID: 2800000, guid: 16398e95a71e96649bbfb2c18d53ef7c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: picture8_texture
+    second: {fileID: 2800000, guid: 046dcec37f33b12488c153077fce1924, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
