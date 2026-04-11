@@ -41,6 +41,7 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats: []
-    m_Colors: []
+    m_Colors:
+    - _EmissionColor: {r: 13.350783, g: 0, b: 0, a: 9.999999}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
