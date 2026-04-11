@@ -2889,31 +2889,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161808674701512712, guid: 455d35e355315744d94b5c07015ede80, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 67.03529
+      value: 76.42
       objectReference: {fileID: 0}
     - target: {fileID: 161808674701512712, guid: 455d35e355315744d94b5c07015ede80, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.18
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 161808674701512712, guid: 455d35e355315744d94b5c07015ede80, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -64.93365
+      value: 23.46
       objectReference: {fileID: 0}
     - target: {fileID: 161808674701512712, guid: 455d35e355315744d94b5c07015ede80, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.23625484
+      value: -0.23625486
       objectReference: {fileID: 0}
     - target: {fileID: 161808674701512712, guid: 455d35e355315744d94b5c07015ede80, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.052506275
+      value: 0.05250628
       objectReference: {fileID: 0}
     - target: {fileID: 161808674701512712, guid: 455d35e355315744d94b5c07015ede80, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.94716203
+      value: 0.9471621
       objectReference: {fileID: 0}
     - target: {fileID: 161808674701512712, guid: 455d35e355315744d94b5c07015ede80, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.21050127
+      value: 0.21050128
       objectReference: {fileID: 0}
     - target: {fileID: 161808674701512712, guid: 455d35e355315744d94b5c07015ede80, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -32078,7 +32078,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839459107}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
