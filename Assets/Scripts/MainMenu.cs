@@ -92,7 +92,7 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Going to play the game!");
 
-        GameManager.GM.ChangeScene("IntroLevel");
+        GameManager.GM.ChangeScene("NewIntro");
     }
 
     void OpenOptions()

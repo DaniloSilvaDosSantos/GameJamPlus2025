@@ -51,8 +51,8 @@ public class GameManager : MonoBehaviour
         RenderSettings.ambientIntensity = 0f;
 
         if (currentScene != "") SceneManager.UnloadSceneAsync(currentScene);
-        currentScene = "GamePlay";
-        SceneManager.LoadScene("GamePlay", LoadSceneMode.Additive);
+        currentScene = "NewOutro";
+        SceneManager.LoadScene("NewOutro", LoadSceneMode.Additive);
         GameObject Player= GameObject.FindWithTag("Player");
 
         Fade = true;
