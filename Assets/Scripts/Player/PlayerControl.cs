@@ -7,6 +7,7 @@ public class PlayerControl : MonoBehaviour
 {
     [Header("Declaração de objetos")]
     [SerializeField] private Transform Camera;
+    [SerializeField] private GameObject jumpscareAnim;
     [SerializeField] private Rigidbody RB;
     [SerializeField] private LayerMask Mobs;
     [SerializeField] private LayerMask Default;
@@ -292,6 +293,11 @@ public class PlayerControl : MonoBehaviour
     {
         GameManager.GM.RespawnPos = transform.position;
         GameManager.GM.NightTime();
+    }
+
+    public void Jumpscare()
+    {
+        jumpscareAnim.SetActive(true);
     }
 
     void FireHandler()

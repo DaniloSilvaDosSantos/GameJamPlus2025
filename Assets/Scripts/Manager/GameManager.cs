@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public float ChangeSpeed = 2f;
     public float Vol = 1f;
     public float Pitch = 1f;
+    public float cooldownLevelChange = 0f;
 
     void Awake()
     {
@@ -72,6 +73,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         HandleFade();
+
+        cooldownLevelChange = Mathf.Max(cooldownLevelChange - Time.deltaTime, 0f);
 
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
@@ -162,18 +165,30 @@ public class GameManager : MonoBehaviour
         Invoke("DoTheSceneChange", 2f);
     }
 
+    
+
     public void RestartLevel()
     {
+        DeathAudio.Play();
+
+        Player.GetComponent<PlayerControl>().Jumpscare();
+
+        Invoke("DoRestart", 0.5f);
+    }
+
+    public void DoRestart()
+    {
+        if(cooldownLevelChange != 0) return;
+        cooldownLevelChange = 0.2f;
+
         if (currentScene != "") SceneManager.UnloadSceneAsync(currentScene);
-        currentScene = "GamePlay";
-        SceneManager.LoadScene("GamePlay", LoadSceneMode.Additive);
+        currentScene = "NewOutro";
+        SceneManager.LoadScene("NewOutro", LoadSceneMode.Additive);
 
         Dead = true;
         Fade = true;
         FadeScreen.color = Color.black;
         FadeScreen.enabled = true;
-
-        DeathAudio.Play();
 
         float alpha = 1f;
         Color currColor = DeathScreen.color;
@@ -211,6 +226,10 @@ public class GameManager : MonoBehaviour
 
     public void DoTheSceneChange()
     {
+        if(cooldownLevelChange != 0) return;
+        cooldownLevelChange = 0.2f;
+
+
         if (currentScene != "") SceneManager.UnloadSceneAsync(currentScene);
         currentScene = sceneToChange;
         SceneManager.LoadScene(sceneToChange, LoadSceneMode.Additive);
