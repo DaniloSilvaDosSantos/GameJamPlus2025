@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 73bf8ea5b109502448118e3b17a00da5
+guid: 7a88427312da62544b7c523622422d73
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: treebaretall
+    second: {fileID: 2100000, guid: d14b2245f67e3fa4f85fd84a85a72d55, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
