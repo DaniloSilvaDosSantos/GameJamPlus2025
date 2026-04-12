@@ -52,6 +52,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: KrampusWithCape
       objectReference: {fileID: 0}
+    - target: {fileID: 6922932614883999412, guid: cdf05b842a8e5f44ab28e0c09ae0e36e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e84e611cd35b39240880acce3ec8fdc5, type: 2}
+    - target: {fileID: 7069788401994446584, guid: cdf05b842a8e5f44ab28e0c09ae0e36e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dd16c9be9edd874aac001aa81efdef8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
