@@ -195,7 +195,7 @@ public class PlayerControl : MonoBehaviour
         if (grounded) return;
 
         MoveAngle = new Vector2 (0f,0f);
-        RB.linearVelocity += transform.up * -10f * Time.deltaTime;
+        RB.linearVelocity += transform.up * -20f * Time.deltaTime;
     }
 
 
