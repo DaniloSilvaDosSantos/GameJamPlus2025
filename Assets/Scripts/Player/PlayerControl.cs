@@ -306,7 +306,7 @@ public class PlayerControl : MonoBehaviour
 
         Audio.PlayOneShot(FlashSound, 0.7F);
 
-        Collider[] hitColliders = Physics.OverlapCapsule(SpotFlash.position, SpotFlash.position + (Camera.forward * 10f), 3f, Mobs);
+        Collider[] hitColliders = Physics.OverlapCapsule(SpotFlash.position, SpotFlash.position + (Camera.forward * 14f), 3f, Mobs);
         foreach (var collider in hitColliders)
         {
             if (collider.gameObject.GetComponent<RunningDeer>() != null)
@@ -314,8 +314,7 @@ public class PlayerControl : MonoBehaviour
                 RunningDeer RD = collider.gameObject.GetComponent<RunningDeer>();
                 if (RD.startle)
                 {
-                    RD.willDeerSappear = true;
-                    RD.running = true;
+                    RD.StartledStart();
                 }
             }
             if (collider.gameObject.CompareTag("Enemy") && (collider.gameObject.transform.position - transform.position).magnitude < 10f)

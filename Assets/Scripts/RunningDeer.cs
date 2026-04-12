@@ -40,6 +40,17 @@ public class RunningDeer : MonoBehaviour
         else RB.linearVelocity = 0f * transform.forward;
     }
 
+    public void StartledStart()
+    {
+        Invoke("Startle", Random.Range(0.05f, 0.25f));
+    }
+
+    void Startle()
+    {
+        running = true;
+        willDeerSappear = true;
+    }
+
     void Removing()
     {
         Destroy(this.gameObject);
