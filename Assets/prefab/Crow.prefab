@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5463846861327446984}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-thigh.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3061212985641211889}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-spine.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3030534377831218141}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-shin.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2965390936738942120}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-neck.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5239505733773406495}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 3182900993928787315}
   - component: {fileID: 7625276296668466137}
   - component: {fileID: -2303362501608167193}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Crow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: c1bf1aa4f59c00444809dc154aec61e9, type: 3}
+  m_Resource: {fileID: 8300000, guid: c09bc53f19dd86149b274ed6c2ab48e9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -291,7 +291,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 25
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -396,7 +396,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8780964504842536738}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: tweak_spine.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,7 +428,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3878616362602641144}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ORG-shoulder.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,7 +461,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4907397895194401959}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-spine.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,7 +493,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7244465946109677873}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MCH-pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -525,7 +525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5432418939052165180}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-spine.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -557,7 +557,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6984841664043815235}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ORG-spine.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -590,7 +590,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7896789002998140997}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ORG-spine.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -625,7 +625,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4129142920761614011}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-shoulder.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -656,7 +656,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2741297861963916073}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ORG-pelvis.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -688,7 +688,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3139169882718669635}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -721,7 +721,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2213471699780818723}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-thigh.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -753,7 +753,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8099018577325596673}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ORG-pelvis.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -785,7 +785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2331681342917491749}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-Wing.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -817,7 +817,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8579769851785957457}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-foot.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -849,7 +849,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5549936238685339521}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-thigh.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -881,7 +881,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 363553789105524431}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MCH-torso.parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -913,7 +913,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8200119400149857502}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-pelvis.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -944,7 +944,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3428704485347399566}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-thigh.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -976,7 +976,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6773974866250498894}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: spine.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1008,7 +1008,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 916606178952446408}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-pelvis.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1039,7 +1039,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3302658912357016397}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-spine.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1071,7 +1071,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4484089882209289242}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MCH-ROT-tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1103,7 +1103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1779142436040619486}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: tweak_spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1135,7 +1135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2315832212641896039}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ORG-shoulder.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1168,7 +1168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 875813129607111875}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1200,7 +1200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3292027367823965095}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MCH-spine.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1232,7 +1232,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8327724797483264671}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1265,7 +1265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8696291630460055595}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-Wing.002.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1296,7 +1296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8496243069867961047}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: spine_fk.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1329,7 +1329,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7952001528950781971}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MCH-spine.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1361,7 +1361,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8391950995606081527}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-shoulder.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1392,7 +1392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8943840077813635871}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-shin.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1424,7 +1424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6836933539201655092}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-shin.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1456,7 +1456,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3173045286211852670}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-Wing.001.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1488,7 +1488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5483037932052682063}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: tweak_spine.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1520,7 +1520,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1285171643568077740}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-toe.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1551,7 +1551,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8121526887064090106}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-Wing.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1583,7 +1583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7899620827269789670}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ORG-spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1615,7 +1615,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4487231415709980623}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-foot.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1647,7 +1647,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2719994838388573235}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-foot.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1679,7 +1679,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2470816245192241070}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-toe.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1711,7 +1711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2086464301874302}
   - component: {fileID: 8885176045630263086}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Crow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1857,7 +1857,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3932404381157242629}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-neck.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1889,7 +1889,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4287298357874591810}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-foot.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1921,7 +1921,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6073947961795093443}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: spine_fk.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1953,7 +1953,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3209177476481222105}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1985,7 +1985,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 514820863285272021}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-spine.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2016,7 +2016,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1478282142805499623}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-Wing.001.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2048,7 +2048,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1315014153252071994}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2079,7 +2079,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6310408025653833753}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-Wing.002.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2110,7 +2110,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4388709769290507801}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MCH-spine.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2142,7 +2142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7298910030985344346}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: spine_fk.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2174,7 +2174,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4677541780205195108}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-shin.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2206,7 +2206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6955861793774703454}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: spine.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2238,7 +2238,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4656278410060841056}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: tweak_spine.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2270,7 +2270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7618192283421406887}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DEF-spine.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}

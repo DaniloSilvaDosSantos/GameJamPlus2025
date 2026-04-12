@@ -13,7 +13,11 @@ public class RunningDeer : MonoBehaviour
     [SerializeField] private Animator AnimatorMove;
     [SerializeField] private Transform Player;
 
-    // Update is called once per frame
+    void Awake()
+    {
+        AnimatorMove.SetFloat("Offset", Random.Range(0f, 1f));
+    }
+
     void FixedUpdate()
     {
         if (RB.linearVelocity.magnitude > 0.2f) AnimatorMove.SetBool("Running", true);
@@ -33,11 +37,22 @@ public class RunningDeer : MonoBehaviour
 
         if (running)
         {
-            if(diagonal) RB.linearVelocity = 13f * transform.forward + 13f * transform.up;
+            if(diagonal) RB.linearVelocity = 13f * transform.forward + 6f * transform.up;
             else RB.linearVelocity = 20f * transform.forward;
             if (!Audio.isPlaying) Audio.Play();
         }
         else RB.linearVelocity = 0f * transform.forward;
+    }
+
+    public void StartledStart()
+    {
+        Invoke("Startle", Random.Range(0.05f, 0.25f));
+    }
+
+    void Startle()
+    {
+        running = true;
+        willDeerSappear = true;
     }
 
     void Removing()
