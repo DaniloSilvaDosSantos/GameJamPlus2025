@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections;
 
-public class WorldButtonFeedback : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+public class WorldButtonFeedback : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("Material Alvo Do Objeto No Mundo)")]
     public Material targetMaterial;
@@ -24,10 +24,10 @@ public class WorldButtonFeedback : MonoBehaviour, IPointerEnterHandler, IPointer
         StartFade(0f);
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    /*public void OnPointerClick(PointerEventData eventData)
     {
         GetComponent<UnityEngine.UI.Button>().onClick.Invoke();
-    }
+    }*/
 
     void StartFade(float target)
     {
