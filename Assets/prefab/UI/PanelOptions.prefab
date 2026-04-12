@@ -280,16 +280,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuCanvasName: CanvasMainMenu
   mainMenu: {fileID: 4815051295934844541, guid: deef6f98ee6c5c942aa32a4e75fb5b8a, type: 3}
-  optionsButtons:
-  - {fileID: 658338481974849039}
-  - {fileID: 8780512108848989034}
-  optionsButtonHighlights:
-  - {fileID: 4104150020712404240}
-  - {fileID: 2101804045764834719}
-  currentButtonIndex: 0
+  backButton: {fileID: 8780512108848989034}
   volumeSlider: {fileID: 5086792337584492248}
-  highlightColor: {r: 1, g: 1, b: 1, a: 1}
-  defaultColor: {r: 0.79607844, g: 0.79607844, b: 0.79607844, a: 1}
 --- !u!1 &3282678723660742983
 GameObject:
   m_ObjectHideFlags: 0

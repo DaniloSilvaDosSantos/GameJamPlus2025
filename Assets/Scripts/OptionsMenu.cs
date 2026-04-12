@@ -5,84 +5,19 @@ public class OptionsMenu : MonoBehaviour
 {
     public string menuCanvasName = "CanvasMenu";
     public GameObject mainMenu;
-    public Button[] optionsButtons;
-    public Image[] optionsButtonHighlights;
-    public int currentButtonIndex = 0;
-    public Slider volumeSlider;
 
-    [Space]
-    public Color highlightColor;
-    public Color defaultColor;
+    public Button backButton;
+    public Slider volumeSlider;
 
     void Start()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
         volumeSlider.value = PlayerPrefs.GetFloat("volume", 0.8f);
         volumeSlider.onValueChanged.AddListener(SetVolume);
 
-        optionsButtons[0].onClick.AddListener(() => { });
-        optionsButtons[1].onClick.AddListener(CloseOptions);
-
-        Debug.Log(currentButtonIndex);
-        UpdateButtonHighlights();
-    }
-
-    void Update()
-    {
-        HandleNavigation();
-        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
-        {
-            optionsButtons[currentButtonIndex].onClick.Invoke();
-        }
-    }
-
-    void HandleNavigation()
-    {
-        int previousButtonIndex = currentButtonIndex;
-
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            currentButtonIndex--;
-            if (currentButtonIndex < 0) currentButtonIndex = optionsButtons.Length - 1;
-            Debug.Log(currentButtonIndex);
-        }
-        else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            currentButtonIndex++;
-            if (currentButtonIndex >= optionsButtons.Length) currentButtonIndex = 0;
-            Debug.Log(currentButtonIndex);
-        }
-
-        if (previousButtonIndex != currentButtonIndex)
-        {
-            UpdateButtonHighlights();
-        }
-
-        if (currentButtonIndex == 0 && (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)))
-        {
-            volumeSlider.value -= 0.1f;
-        }
-        else if (currentButtonIndex == 0 && (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)))
-        {
-            volumeSlider.value += 0.1f;
-        }
-    }
-
-    void UpdateButtonHighlights()
-    {
-        for (int i = 0; i < optionsButtons.Length; i++)
-        {
-            Image buttonImage = optionsButtons[i].GetComponent<Image>();
-            if (i == currentButtonIndex)
-            {
-                buttonImage.color = highlightColor;
-                optionsButtonHighlights[i].gameObject.SetActive(true);
-            }
-            else
-            {
-                buttonImage.color = defaultColor;
-                optionsButtonHighlights[i].gameObject.SetActive(false);
-            }
-        }
+        backButton.onClick.AddListener(CloseOptions);
     }
 
     public void SetVolume(float volume)
@@ -94,16 +29,24 @@ public class OptionsMenu : MonoBehaviour
 
     public void CloseOptions()
     {
-        Debug.Log("Closing Options Menu !");
+        ResetAllWorldButtons();
 
-        GameObject menuCanvas = GameObject.Find(menuCanvasName);
-        MainMenuManager menuController = GameObject.Find("CanvasMainMenu").GetComponent<MainMenuManager>();
-        if(menuController.previousMenu == "MainMenu")
+        GameObject canvas = GameObject.Find(menuCanvasName);
+        MainMenuManager manager = GameObject.Find("CanvasMainMenu").GetComponent<MainMenuManager>();
+
+        if (manager.previousMenu == "MainMenu")
         {
-            Instantiate(mainMenu, menuCanvas.transform);
-            menuController.currentButtonIndexTemp = 1;
-        } 
-        
+            Instantiate(mainMenu, canvas.transform);
+        }
+
         Destroy(gameObject);
+    }
+
+    void ResetAllWorldButtons()
+    {
+        foreach (var btn in FindObjectsByType<WorldButtonFeedback>(FindObjectsSortMode.None))
+        {
+            btn.ResetMaterial();
+        }
     }
 }
