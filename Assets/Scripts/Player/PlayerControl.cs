@@ -64,6 +64,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private AudioSource Audio;
     [SerializeField] private AudioClip FlashSound;
     [SerializeField] private AudioClip StepSound;
+    [SerializeField] private AudioClip jsSound;
 
 
     // Helpers do movimento
@@ -297,6 +298,7 @@ public class PlayerControl : MonoBehaviour
 
     public void Jumpscare()
     {
+        Audio.PlayOneShot(jsSound, 1f);
         jumpscareAnim.SetActive(true);
         jumpscareAnim.GetComponent<Animator>().SetBool("Scare", true);
     }
