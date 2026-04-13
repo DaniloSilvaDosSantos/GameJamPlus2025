@@ -236,6 +236,7 @@ MonoBehaviour:
   willDeerSappear: 0
   startle: 1
   diagonal: 1
+  audioloop: 0
   startleRange: 8
   timer: 10
   RB: {fileID: 3182900993928787315}
