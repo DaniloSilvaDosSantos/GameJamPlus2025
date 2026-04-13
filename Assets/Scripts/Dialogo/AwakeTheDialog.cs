@@ -46,6 +46,7 @@ public class AwakeTheDialog : MonoBehaviour
     {
         if(isEndGame)
         {
+            GameManager.GM.Daytime();
             GameManager.GM.ChangeScene("MainMenu");
 
             return;

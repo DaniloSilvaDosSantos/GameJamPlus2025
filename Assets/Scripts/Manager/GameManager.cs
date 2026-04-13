@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Daytime()
+    public void Daytime()
     {
         RenderSettings.skybox = DuskSkybox;
         RenderSettings.ambientIntensity = 0.0f;
