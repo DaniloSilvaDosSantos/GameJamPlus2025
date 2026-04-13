@@ -366,7 +366,7 @@ MonoBehaviour:
   shakeReduct: 10
   shakeMax: 200
   shakeRate: 0.18
-  movementSpeed: 1.7
+  movementSpeed: 1.3
   movementDamping: 0.2
   Flash: {fileID: 7591554438179118289}
   SpotFlash: {fileID: 6712930502805754863}
