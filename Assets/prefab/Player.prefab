@@ -381,6 +381,7 @@ MonoBehaviour:
   Audio: {fileID: 9021669481541591278}
   FlashSound: {fileID: 8300000, guid: 5b822eaf6b2816c41a31c09b248622e0, type: 3}
   StepSound: {fileID: 8300000, guid: 7532bbbf9796110409519951691f27e9, type: 3}
+  jsSound: {fileID: 8300000, guid: 4687ddfb3663e7447aab544720ec11b4, type: 3}
   fireDelay: 1.5
 --- !u!82 &9021669481541591278
 AudioSource:

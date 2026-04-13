@@ -169,7 +169,6 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
-        DeathAudio.Play();
 
         Player= GameObject.FindWithTag("Player");
         Player.GetComponent<PlayerControl>().Jumpscare();
@@ -181,6 +180,8 @@ public class GameManager : MonoBehaviour
     {
         if(cooldownLevelChange != 0) return;
         cooldownLevelChange = 0.2f;
+
+        DeathAudio.Play();
 
         if (currentScene != "") SceneManager.UnloadSceneAsync(currentScene);
         currentScene = "NewOutro";
