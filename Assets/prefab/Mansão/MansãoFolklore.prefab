@@ -12695,7 +12695,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 51
+  m_VersionIndex: 45
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -17789,6 +17789,7 @@ GameObject:
   - component: {fileID: 7823203400124424536}
   - component: {fileID: 5337145897671626929}
   - component: {fileID: 5605444681358608319}
+  - component: {fileID: 1546493197218980972}
   m_Layer: 0
   m_Name: Point Light (1)
   m_TagString: Untagged
@@ -17822,8 +17823,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 0.61514807, b: 0, a: 1}
-  m_Intensity: 30.3
-  m_Range: 10
+  m_Intensity: 25
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -17900,6 +17901,21 @@ MonoBehaviour:
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
 --- !u!114 &5605444681358608319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3408429240055934679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2dc8d2d55318484792b3b6556dea057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minIntensity: 14.8
+  maxIntensity: 30.7
+  TimeBetweenIntensity: 0.1
+--- !u!114 &1546493197218980972
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18038,6 +18054,7 @@ GameObject:
   - component: {fileID: 2353001457818611421}
   - component: {fileID: 1602343703408951227}
   - component: {fileID: 1560456282048226220}
+  - component: {fileID: 7052820020088467537}
   m_Layer: 0
   m_Name: Point Light (2)
   m_TagString: Untagged
@@ -18054,7 +18071,7 @@ Transform:
   m_GameObject: {fileID: 4721750826254315413}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.9518204, y: 5.2921085, z: 3.5525513}
+  m_LocalPosition: {x: -5.9518204, y: 4.63, z: 3.5525513}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18071,8 +18088,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 0.61514807, b: 0, a: 1}
-  m_Intensity: 30.3
-  m_Range: 10
+  m_Intensity: 25
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -18149,6 +18166,21 @@ MonoBehaviour:
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
 --- !u!114 &1560456282048226220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721750826254315413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2dc8d2d55318484792b3b6556dea057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minIntensity: 14.8
+  maxIntensity: 30.7
+  TimeBetweenIntensity: 0.1
+--- !u!114 &7052820020088467537
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18636,6 +18668,7 @@ GameObject:
   - component: {fileID: 4824369357181752391}
   - component: {fileID: 2878944663051598151}
   - component: {fileID: 8280132041689403440}
+  - component: {fileID: 7426624068811801518}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -18652,7 +18685,7 @@ Transform:
   m_GameObject: {fileID: 8980188987074453073}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.08181763, y: 4.482107, z: 3.5525513}
+  m_LocalPosition: {x: -0.08181763, y: 4.09, z: 3.5525513}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18669,8 +18702,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 0.61514807, b: 0, a: 1}
-  m_Intensity: 30.3
-  m_Range: 10
+  m_Intensity: 13.23
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -18747,6 +18780,21 @@ MonoBehaviour:
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
 --- !u!114 &8280132041689403440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8980188987074453073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2dc8d2d55318484792b3b6556dea057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minIntensity: 14.8
+  maxIntensity: 30.7
+  TimeBetweenIntensity: 0.1
+--- !u!114 &7426624068811801518
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
