@@ -16,12 +16,12 @@ public class WorldButtonFeedback : MonoBehaviour, IPointerEnterHandler, IPointer
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        StartFade(1f);
+        StartFade(0f);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        StartFade(0f);
+        StartFade(1f);
     }
 
     /*public void OnPointerClick(PointerEventData eventData)
