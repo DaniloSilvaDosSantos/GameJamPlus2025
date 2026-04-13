@@ -49194,7 +49194,6 @@ SceneRoots:
   - {fileID: 96734659}
   - {fileID: 1766097790}
   - {fileID: 1817640447}
-<<<<<<< HEAD
   - {fileID: 434645715}
   - {fileID: 515951858}
   - {fileID: 1801091883}
@@ -49204,7 +49203,3 @@ SceneRoots:
   - {fileID: 1716933531}
   - {fileID: 727878556}
   - {fileID: 707098368}
-=======
-  - {fileID: 2122631729}
-  - {fileID: 1223170029}
->>>>>>> 7eedfe22dfeb2ce31c08cdf730e2b6ba404aea58
