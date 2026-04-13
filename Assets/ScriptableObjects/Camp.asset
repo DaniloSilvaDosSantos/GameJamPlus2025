@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entries:
   - textColor: {r: 1, g: 1, b: 1, a: 1}
-    text: A camp, how they can stay out here in the cold
-  - textColor: {r: 1, g: 1, b: 1, a: 1}
-    text: Looks like no one is here anymore, they must have abandoned, but why?
+    text: A camp? Looks like no one is here anymore, they must have abandoned, but
+      why?
