@@ -158,7 +158,7 @@ public class PlayerControl : MonoBehaviour
 
         if (MoveAngle.magnitude > 0.5f)
         {
-            Vector3 obsPos = transform.position + ((transform.forward * MoveAngle.y * 0.34f) - (transform.up * 0.22f) + (transform.right * MoveAngle.x * 0.4f));
+            Vector3 obsPos = transform.position + ((transform.forward * MoveAngle.y * 0.3f) - (transform.up * 0.2f) + (transform.right * MoveAngle.x * 0.3f));
 
             bool hasledge = false;
 
@@ -175,7 +175,7 @@ public class PlayerControl : MonoBehaviour
             if (hasledge)
             {
                 bool hasWall = false;
-                hitColliders = Physics.OverlapSphere(obsPos + (transform.up * 0.7f), 0.3f, Default);
+                hitColliders = Physics.OverlapSphere(obsPos + (transform.up * 0.6f), 0.3f, Default);
                 foreach (var collider in hitColliders)
                 {
                     if (collider != transform.GetComponent<Collider>())

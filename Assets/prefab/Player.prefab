@@ -366,7 +366,7 @@ MonoBehaviour:
   shakeReduct: 10
   shakeMax: 200
   shakeRate: 0.18
-  movementSpeed: 2.25
+  movementSpeed: 1.7
   movementDamping: 0.2
   Flash: {fileID: 7591554438179118289}
   SpotFlash: {fileID: 6712930502805754863}
@@ -601,7 +601,7 @@ MonoBehaviour:
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 105
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
@@ -1368,7 +1368,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7458093997596101408, guid: dbcfe77ea2190094eb9ed198a6e2d1d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4033571385312189974}
   m_SourcePrefab: {fileID: 100100000, guid: dbcfe77ea2190094eb9ed198a6e2d1d0, type: 3}
 --- !u!4 &512462868377138809 stripped
 Transform:
@@ -1380,6 +1383,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7458093997596101408, guid: dbcfe77ea2190094eb9ed198a6e2d1d0, type: 3}
   m_PrefabInstance: {fileID: 7770690771668330467}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4033571385312189974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889305826085448899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 2
+  blendDistance: 10
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: b644b5b7c8bbc1149af9655efa701b46, type: 2}
 --- !u!1001 &8410714416785130542
 PrefabInstance:
   m_ObjectHideFlags: 0
