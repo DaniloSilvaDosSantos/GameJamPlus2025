@@ -4683,15 +4683,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161808674701512712, guid: 455d35e355315744d94b5c07015ede80, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 76.997375
+      value: 95.61
       objectReference: {fileID: 0}
     - target: {fileID: 161808674701512712, guid: 455d35e355315744d94b5c07015ede80, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.13
+      value: 16.27
       objectReference: {fileID: 0}
     - target: {fileID: 161808674701512712, guid: 455d35e355315744d94b5c07015ede80, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 27.075113
+      value: -70.32
       objectReference: {fileID: 0}
     - target: {fileID: 161808674701512712, guid: 455d35e355315744d94b5c07015ede80, type: 3}
       propertyPath: m_LocalRotation.w
@@ -20830,7 +20830,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 5d23f0e7d8437dd46b12b4dd0a3e517f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -20838,8 +20838,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 5
+  MinDistance: 0.5
+  MaxDistance: 11
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
