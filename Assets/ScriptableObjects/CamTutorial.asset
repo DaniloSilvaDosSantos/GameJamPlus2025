@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CamTutorial
   m_EditorClassIdentifier: 
   entries:
-  - textColor: {r: 1, g: 1, b: 1, a: 1}
-    text: Press Right Mouse Button to Aim The Camera
-  - textColor: {r: 1, g: 1, b: 1, a: 1}
+  - textColor: {r: 1, g: 0.82076013, b: 0, a: 1}
+    text: Press The Right Mouse Button To Aim The Camera
+  - textColor: {r: 1, g: 0.81960785, b: 0, a: 1}
     text: When The Camera is Aimed, Press Left Mouse Button.
