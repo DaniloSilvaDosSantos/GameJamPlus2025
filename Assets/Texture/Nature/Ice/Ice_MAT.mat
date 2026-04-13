@@ -104,9 +104,9 @@ Material:
     m_Floats:
     - _IntersectionDepth: 1
     - _Lerp: 0.5
-    - _Normal: 0.34
-    - _ParallaxIntensity: 10
-    - _Parallax_Intensity2: 15
+    - _Normal: 1.03
+    - _ParallaxIntensity: 12
+    - _Parallax_Intensity2: 18
     - _QueueControl: 0
     - _QueueOffset: 0
     - _blendOpacity: -0.05

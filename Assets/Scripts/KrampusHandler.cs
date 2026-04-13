@@ -107,7 +107,7 @@ public class KrampusHandler : MonoBehaviour
                 ASS.PlayOneShot(Scream1);
                 screamed = true;
             }
-            if (!AS.isPlaying) AS.PlayOneShot(Slowstep, 0.5f);
+            if (!AS.isPlaying) AS.PlayOneShot(Slowstep, 0.25f);
             RB.linearVelocity = -transform.forward*stalkSpeed + new Vector3(0f, -1f, 0f);
         }
         else
@@ -123,7 +123,7 @@ public class KrampusHandler : MonoBehaviour
                 AnimatorMove.SetBool("Running", false);
                 AnimatorMove.SetBool("Stalking", true);
                 currentlyStalking = false;
-                if (!AS.isPlaying) AS.PlayOneShot(Slowstep, 0.5f);
+                if (!AS.isPlaying) AS.PlayOneShot(Slowstep, 0.25f);
                 RB.linearVelocity = transform.forward*stalkSpeed + new Vector3(0f, -1f, 0f);
             }
             else
@@ -151,7 +151,7 @@ public class KrampusHandler : MonoBehaviour
                         ASS.PlayOneShot(Scream1);
                         screamed = true;
                     }
-                    if (!AS.isPlaying) AS.PlayOneShot(Faststep);
+                    if (!AS.isPlaying) AS.PlayOneShot(Faststep, 0.5f);
                     RB.linearVelocity = transform.forward*leapSpeed + new Vector3(0f, -3f, 0f);
                 }
             }

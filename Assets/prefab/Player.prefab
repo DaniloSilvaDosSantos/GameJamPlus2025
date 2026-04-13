@@ -366,7 +366,7 @@ MonoBehaviour:
   shakeReduct: 10
   shakeMax: 200
   shakeRate: 0.18
-  movementSpeed: 1.7
+  movementSpeed: 1.3
   movementDamping: 0.2
   Flash: {fileID: 7591554438179118289}
   SpotFlash: {fileID: 6712930502805754863}
@@ -382,6 +382,7 @@ MonoBehaviour:
   FlashSound: {fileID: 8300000, guid: 5b822eaf6b2816c41a31c09b248622e0, type: 3}
   StepSound: {fileID: 8300000, guid: 7532bbbf9796110409519951691f27e9, type: 3}
   jsSound: {fileID: 8300000, guid: 4687ddfb3663e7447aab544720ec11b4, type: 3}
+  animLocked: 0
   fireDelay: 1.5
 --- !u!82 &9021669481541591278
 AudioSource:

@@ -70,6 +70,8 @@ public class PlayerControl : MonoBehaviour
     // Helpers do movimento
     private Vector3 pVelocity = new Vector3(0,0,0);
 
+    [SerializeField] private bool animLocked = false;
+
     public float fireDelay = 3f;
 
     private float fireCoolDown = 0f;
@@ -203,6 +205,12 @@ public class PlayerControl : MonoBehaviour
 
     void HandleLooking()
     {
+        if(animLocked)
+        {
+            Camera.localRotation = Quaternion.Euler(300f, Camera.localEulerAngles.y, Camera.localEulerAngles.z);
+            return;
+        }
+
         transform.localRotation = Quaternion.Euler(transform.localEulerAngles.x, transform.localEulerAngles.y - (-LookAngle.x * (lookSensX/400f)), transform.localEulerAngles.z);
 
         float headAngle = Camera.localEulerAngles.x -LookAngle.y * (lookSensY/400f);
@@ -298,6 +306,7 @@ public class PlayerControl : MonoBehaviour
 
     public void Jumpscare()
     {
+        animLocked = true;
         Audio.PlayOneShot(jsSound, 1f);
         jumpscareAnim.SetActive(true);
         jumpscareAnim.GetComponent<Animator>().SetBool("Scare", true);
