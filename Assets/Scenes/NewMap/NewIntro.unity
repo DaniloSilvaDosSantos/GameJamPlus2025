@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.23584908, g: 0.22710256, b: 0.21471167, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1.64
+  m_AmbientIntensity: 1.43
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 9b2fedad999578040b488a55f2476836, type: 2}
@@ -35,7 +35,7 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 0.335
+  m_ReflectionIntensity: 0.246
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
   m_UseRadianceAmbientProbe: 0
@@ -609,18 +609,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 734674203073454708, guid: f839df3ee5909cd4192b039930d2ded4, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3162118161842197734, guid: f839df3ee5909cd4192b039930d2ded4, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5892100492833719350, guid: f839df3ee5909cd4192b039930d2ded4, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cdf05b842a8e5f44ab28e0c09ae0e36e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 83.857
@@ -910,6 +898,18 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8722209695743178452, guid: cdf05b842a8e5f44ab28e0c09ae0e36e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 734674203073454708, guid: f839df3ee5909cd4192b039930d2ded4, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3162118161842197734, guid: f839df3ee5909cd4192b039930d2ded4, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892100492833719350, guid: f839df3ee5909cd4192b039930d2ded4, type: 3}
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
