@@ -705,7 +705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IsGlobal: 0
   priority: 1
-  blendDistance: 6
+  blendDistance: 10
   weight: 0.4
   sharedProfile: {fileID: 11400000, guid: b644b5b7c8bbc1149af9655efa701b46, type: 2}
 --- !u!4 &744885704245901683 stripped
