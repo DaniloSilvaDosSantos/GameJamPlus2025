@@ -229,7 +229,7 @@ public class PlayerControl : MonoBehaviour
             shakeAmount = Mathf.Clamp((shakeAmount - (shakeReduct * Time.deltaTime)), 0f, shakeMax);
         }
 
-        currAngles += Time.deltaTime * shakeAmount*0.75f;
+        currAngles += Time.deltaTime * shakeAmount*1.5f;
         //if(currAngles >= 4f) currAngles -= 4f;
 
         randomBob = (Mathf.Sin(currAngles) * shakeAmount/30f * Vector3.right) + (Mathf.Cos(currAngles*2f) * shakeAmount/50f  * Vector3.up);
