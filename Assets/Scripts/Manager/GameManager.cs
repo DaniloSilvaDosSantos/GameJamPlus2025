@@ -171,9 +171,10 @@ public class GameManager : MonoBehaviour
     {
         DeathAudio.Play();
 
+        Player= GameObject.FindWithTag("Player");
         Player.GetComponent<PlayerControl>().Jumpscare();
 
-        Invoke("DoRestart", 0.5f);
+        Invoke("DoRestart", 1f);
     }
 
     public void DoRestart()

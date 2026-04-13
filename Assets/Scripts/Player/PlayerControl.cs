@@ -157,7 +157,7 @@ public class PlayerControl : MonoBehaviour
 
         if (MoveAngle.magnitude > 0.5f)
         {
-            Vector3 obsPos = transform.position + ((transform.forward * MoveAngle.y * 0.4f) - (transform.up * 0.26f) + (transform.right * MoveAngle.x * 0.4f));
+            Vector3 obsPos = transform.position + ((transform.forward * MoveAngle.y * 0.34f) - (transform.up * 0.22f) + (transform.right * MoveAngle.x * 0.4f));
 
             bool hasledge = false;
 
@@ -298,6 +298,7 @@ public class PlayerControl : MonoBehaviour
     public void Jumpscare()
     {
         jumpscareAnim.SetActive(true);
+        jumpscareAnim.GetComponent<Animator>().SetBool("Scare", true);
     }
 
     void FireHandler()

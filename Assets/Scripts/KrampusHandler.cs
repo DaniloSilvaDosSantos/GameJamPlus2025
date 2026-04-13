@@ -68,6 +68,7 @@ public class KrampusHandler : MonoBehaviour
     void KillPlayer()
     {
         GameManager.GM.RestartLevel();
+        Destroy(this.gameObject);
     }
 
     void HandlePlayerChase()
@@ -91,9 +92,9 @@ public class KrampusHandler : MonoBehaviour
         transform.rotation = rotation;
 
 
-        if (playerDirection.magnitude < 1f)
+        if (playerDirection.magnitude < 1.2f)
         {
-            Invoke("KillPlayer", 0.15f);
+            Invoke("KillPlayer", 0.05f);
         }
 
         if (currentlyStartled)
