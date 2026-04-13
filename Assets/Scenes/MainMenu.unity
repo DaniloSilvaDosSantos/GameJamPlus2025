@@ -14918,8 +14918,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2dc8d2d55318484792b3b6556dea057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minIntensity: 0.5
-  maxIntensity: 1.2
+  minIntensity: 0.15
+  maxIntensity: 0.5
   TimeBetweenIntensity: 0.1
 --- !u!1001 &1624872561
 PrefabInstance:
