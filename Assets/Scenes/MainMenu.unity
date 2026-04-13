@@ -14723,6 +14723,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 25b21187c2354e44397a53b9fbdca40f, type: 3}
   m_PrefabInstance: {fileID: 1493784835}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1498603006
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8301033747593894273, guid: 439a1266b4dd427489ae66d039839bee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 79.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301033747593894273, guid: 439a1266b4dd427489ae66d039839bee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 21.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301033747593894273, guid: 439a1266b4dd427489ae66d039839bee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -63.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301033747593894273, guid: 439a1266b4dd427489ae66d039839bee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301033747593894273, guid: 439a1266b4dd427489ae66d039839bee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301033747593894273, guid: 439a1266b4dd427489ae66d039839bee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301033747593894273, guid: 439a1266b4dd427489ae66d039839bee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301033747593894273, guid: 439a1266b4dd427489ae66d039839bee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301033747593894273, guid: 439a1266b4dd427489ae66d039839bee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301033747593894273, guid: 439a1266b4dd427489ae66d039839bee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8368813092041015579, guid: 439a1266b4dd427489ae66d039839bee, type: 3}
+      propertyPath: m_Name
+      value: Snow particles
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 439a1266b4dd427489ae66d039839bee, type: 3}
 --- !u!1001 &1519577629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17475,3 +17532,4 @@ SceneRoots:
   - {fileID: 1008843508}
   - {fileID: 112080615}
   - {fileID: 726123276}
+  - {fileID: 1498603006}
