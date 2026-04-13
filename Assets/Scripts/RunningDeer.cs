@@ -6,6 +6,8 @@ public class RunningDeer : MonoBehaviour
     public bool willDeerSappear = false;
     public bool startle = false;
     public bool diagonal = false;
+    public bool audioloop = true;
+    private bool hasLooped = false;
     public float startleRange = 8f;
     public float timer = 10f;
     [SerializeField] private Rigidbody RB;
@@ -39,7 +41,11 @@ public class RunningDeer : MonoBehaviour
         {
             if(diagonal) RB.linearVelocity = 13f * transform.forward + 6f * transform.up;
             else RB.linearVelocity = 20f * transform.forward;
-            if (!Audio.isPlaying) Audio.Play();
+            if (!Audio.isPlaying && !hasLooped)
+            {
+                if(!audioloop) hasLooped = true;
+                Audio.Play();
+            }
         }
         else RB.linearVelocity = 0f * transform.forward;
     }

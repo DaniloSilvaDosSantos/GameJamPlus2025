@@ -350,6 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 2994019392663673641}
+  jumpscareAnim: {fileID: 889305826085448899}
   RB: {fileID: 6453437894757663809}
   Mobs:
     serializedVersion: 2
@@ -1095,6 +1096,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 378543701268156203, guid: dbcfe77ea2190094eb9ed198a6e2d1d0, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7c17c74e8e3afbe42823dd0dcb7614a7, type: 2}
     - target: {fileID: 407284874156480303, guid: dbcfe77ea2190094eb9ed198a6e2d1d0, type: 3}
       propertyPath: m_Layer
       value: 5
@@ -1367,6 +1372,11 @@ PrefabInstance:
 --- !u!4 &512462868377138809 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7839544661516489114, guid: dbcfe77ea2190094eb9ed198a6e2d1d0, type: 3}
+  m_PrefabInstance: {fileID: 7770690771668330467}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &889305826085448899 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7458093997596101408, guid: dbcfe77ea2190094eb9ed198a6e2d1d0, type: 3}
   m_PrefabInstance: {fileID: 7770690771668330467}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8410714416785130542

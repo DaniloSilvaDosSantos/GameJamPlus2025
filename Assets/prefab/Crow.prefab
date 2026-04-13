@@ -236,6 +236,7 @@ MonoBehaviour:
   willDeerSappear: 0
   startle: 1
   diagonal: 1
+  audioloop: 0
   startleRange: 8
   timer: 10
   RB: {fileID: 3182900993928787315}
@@ -1756,7 +1757,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: b2f806dd2d38d4a48807b8411a95ea41, type: 3}
+  - {fileID: 2100000, guid: 087295bb9f3d9324b855d3cb4c2d73c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
