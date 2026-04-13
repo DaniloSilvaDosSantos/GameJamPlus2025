@@ -237,7 +237,7 @@ MonoBehaviour:
   startle: 1
   diagonal: 1
   audioloop: 0
-  startleRange: 8
+  startleRange: 4
   timer: 10
   RB: {fileID: 3182900993928787315}
   Audio: {fileID: 7625276296668466137}
